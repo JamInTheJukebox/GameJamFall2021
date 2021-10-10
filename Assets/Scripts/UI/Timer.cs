@@ -19,7 +19,6 @@ public class Timer : MonoBehaviour
                     int minutes = (int)m_elapsedTime / 60;
                     int seconds = (int)m_elapsedTime - 60 * minutes;
                     timerText.text =  string.Format("{0:00}:{1:00}", minutes, seconds);
-                    print("WOW!");
                 }
             }
         }
@@ -30,6 +29,11 @@ public class Timer : MonoBehaviour
     private void Awake()
     {
         timerText = GetComponent<TextMeshProUGUI>();
+    }
+
+    private void Start()
+    {
+        GameManager.instance.enablePausing(true);
     }
 
     private void Update()

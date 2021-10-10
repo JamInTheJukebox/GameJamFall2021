@@ -18,10 +18,17 @@ public class MouseAxis
 public class AnimationTags
 {
     // insert animation tags here
+    public const string LOAD_FADEIN = "LoadingFadeIn";
+    public const string LOAD_FADEOUT = "LoadingFadeOut";
 }
 
 public class Tags
 {
     // insert tags here.
     
+}
+public class SceneNames
+{
+    public const string USER_INTERFACE = "UserInterface";
+    public const string MAIN_MENU = "MainMenu";
 }
