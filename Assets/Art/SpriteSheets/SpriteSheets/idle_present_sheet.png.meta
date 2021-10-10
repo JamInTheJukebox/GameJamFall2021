@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: fcfdafe45d7ed12499c4483c6ec0f0a3
+guid: e737b77e8dee51e459d8453e9074d183
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2983256667597100348
-    second: idle_sprite_sheet_canvas2res128_0
+      213: -861559020927076431
+    second: idle_present_sheet_0
   - first:
-      213: -3047068868358104558
-    second: idle_sprite_sheet_canvas2res128_1
+      213: -1712239010592629263
+    second: idle_present_sheet_1
   - first:
-      213: 1813935124032640503
-    second: idle_sprite_sheet_canvas2res128_2
+      213: 731521067223448619
+    second: idle_present_sheet_2
   - first:
-      213: 2657662446415318299
-    second: idle_sprite_sheet_canvas2res128_3
-  - first:
-      213: -5063103840547140669
-    second: idle_sprite_sheet_canvas2res128_4
-  - first:
-      213: -6997772998132694474
-    second: idle_sprite_sheet_canvas2res128_5
+      213: 8241952770407706308
+    second: idle_present_sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -88,7 +82,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -100,7 +94,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -109,13 +103,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_sprite_sheet_canvas2res128_0
+      name: idle_present_sheet_0
       rect:
         serializedVersion: 2
-        x: 830
-        y: 480
-        width: 405
-        height: 880
+        x: 468
+        y: 268
+        width: 222
+        height: 493
+      alignment: 9
+      pivot: {x: 0.49, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7bb9c92a02b04f0800000000000000
+      internalID: -861559020927076431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_present_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 265
+        width: 224
+        height: 493
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,41 +138,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ca2f06edd75996d0800000000000000
-      internalID: -2983256667597100348
+      spriteID: 1fd5f0311b7ec38e0800000000000000
+      internalID: -1712239010592629263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_sprite_sheet_canvas2res128_1
+      name: idle_present_sheet_2
       rect:
         serializedVersion: 2
-        x: 1470
-        y: 480
-        width: 405
-        height: 880
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21a1d5f1203a6b5d0800000000000000
-      internalID: -3047068868358104558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_sprite_sheet_canvas2res128_3
-      rect:
-        serializedVersion: 2
-        x: 2223
-        y: 480
-        width: 405
-        height: 880
+        x: 1247
+        y: 268
+        width: 222
+        height: 489
       alignment: 9
       pivot: {x: 0.47, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,29 +159,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1d0b730ae9e1e420800000000000000
-      internalID: 2657662446415318299
+      spriteID: b2c719de882e62a00800000000000000
+      internalID: 731521067223448619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_sprite_sheet_canvas2res128_4
+      name: idle_present_sheet_3
       rect:
         serializedVersion: 2
-        x: 2850
-        y: 480
-        width: 405
-        height: 880
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1601
+        y: 268
+        width: 230
+        height: 496
+      alignment: 9
+      pivot: {x: 0.49, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cb854be1ed3cb9b0800000000000000
-      internalID: -5063103840547140669
+      spriteID: 4cea2bf706c416270800000000000000
+      internalID: 8241952770407706308
       vertices: []
       indices: 
       edges: []

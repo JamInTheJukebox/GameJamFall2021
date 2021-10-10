@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: cbf0cd503541b504fb8119c497573d7f
+guid: 20758fc1e7ddab24484c2d4f0c6d2785
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4305358183915297002
-    second: idle future sheet_0
+      213: -2983256667597100348
+    second: idle_sprite_sheet_canvas2res128_0
   - first:
-      213: -2320072694794904178
-    second: idle future sheet_1
+      213: -3047068868358104558
+    second: idle_sprite_sheet_canvas2res128_1
   - first:
-      213: -5205875738095641466
-    second: idle future sheet_2
+      213: 2657662446415318299
+    second: idle_sprite_sheet_canvas2res128_3
   - first:
-      213: -3422328874443263558
-    second: idle future sheet_3
+      213: -5063103840547140669
+    second: idle_sprite_sheet_canvas2res128_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,85 +103,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle future sheet_0
+      name: idle_sprite_sheet_canvas2res128_0
       rect:
         serializedVersion: 2
-        x: 74
-        y: 21
-        width: 219
-        height: 487
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 833
+        y: 485
+        width: 404
+        height: 872
+      alignment: 9
+      pivot: {x: 0.49, y: 0.49}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61768e0ea8b4044c0800000000000000
-      internalID: -4305358183915297002
+      spriteID: 4ca2f06edd75996d0800000000000000
+      internalID: -2983256667597100348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle future sheet_1
+      name: idle_sprite_sheet_canvas2res128_1
       rect:
         serializedVersion: 2
-        x: 429
-        y: 17
-        width: 223
-        height: 490
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1467
+        y: 481
+        width: 400
+        height: 860
+      alignment: 9
+      pivot: {x: 0.51, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8d9aa52d227dcfd0800000000000000
-      internalID: -2320072694794904178
+      spriteID: 21a1d5f1203a6b5d0800000000000000
+      internalID: -3047068868358104558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle future sheet_2
+      name: idle_sprite_sheet_canvas2res128_3
       rect:
         serializedVersion: 2
-        x: 859
-        y: 17
-        width: 211
-        height: 488
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2210
+        y: 481
+        width: 400
+        height: 870
+      alignment: 9
+      pivot: {x: 0.5, y: 0.495}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68c1cfd199301c7b0800000000000000
-      internalID: -5205875738095641466
+      spriteID: b1d0b730ae9e1e420800000000000000
+      internalID: 2657662446415318299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle future sheet_3
+      name: idle_sprite_sheet_canvas2res128_4
       rect:
         serializedVersion: 2
-        x: 1207
-        y: 20
-        width: 225
-        height: 493
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2851
+        y: 483
+        width: 402
+        height: 866
+      alignment: 9
+      pivot: {x: 0.5, y: 0.495}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab13f3e55027180d0800000000000000
-      internalID: -3422328874443263558
+      spriteID: 3cb854be1ed3cb9b0800000000000000
+      internalID: -5063103840547140669
       vertices: []
       indices: 
       edges: []
