@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Camera_follow : MonoBehaviour
 {
-    public Character_Controller target;
+    public CharacterMovement target;
     public bool isFollowing = true;
     private float zPosition;
     private Vector3 velocity = Vector3.zero;
@@ -13,7 +13,7 @@ public class Camera_follow : MonoBehaviour
     void Awake()
     {
         zPosition = transform.position.z;
-        target = FindObjectOfType<Character_Controller>();
+        target = FindObjectOfType<CharacterMovement>();
 
     }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 // Test for github error
 
-public class Character_Controller : MonoBehaviour
+public class CharacterMovement : MonoBehaviour
 {
     public float horizontalSpeed = 8;
     Rigidbody2D rb;
