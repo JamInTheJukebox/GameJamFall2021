@@ -9,7 +9,7 @@ public class ItemScriptable : ScriptableObject
 
     public Sprite itemSprite;
 
-    public Sprite cursorImage;
+    public Texture2D cursorImage;
 
     public int itemUses = 0;
 

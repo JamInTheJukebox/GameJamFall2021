@@ -7,19 +7,25 @@ public class ClickController : MonoBehaviour
     // Update is called once per frame
     void Update() { 
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
-                RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
-                if (hit.collider != null)
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+            if (hit.collider != null)
+            {
+                Debug.Log(hit.collider.gameObject.name);
+                var obj = hit.collider.GetComponent<Interactable>();
+                if (!obj) { return; }
+                if ((bool)obj?.Interact(mousePos2D))
                 {
-                    Debug.Log(hit.collider.gameObject.name);
-                    hit.collider.attachedRigidbody.AddForce(Vector2.up);
+                    obj.executeInteractable();
+                    Debug.Log("successful interaction!");
                 }
             }
         }
+    }
     
 }
 

@@ -24,8 +24,9 @@ public class AnimationTags
 
 public class Tags
 {
-    // insert tags here.
-    
+    public const string PLAYER = "Player";
+
+
 }
 public class SceneNames
 {

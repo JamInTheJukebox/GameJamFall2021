@@ -25,15 +25,11 @@ public class Timer : MonoBehaviour
     }
     const float MaxTime = 5999;
 
-    private TextMeshProUGUI timerText;
-    private void Awake()
-    {
-        timerText = GetComponent<TextMeshProUGUI>();
-    }
+    [SerializeField] TextMeshProUGUI timerText;
 
     private void Start()
     {
-        GameManager.instance.enablePausing(true);
+        GameManager.instance?.enablePausing(true);
     }
 
     private void Update()

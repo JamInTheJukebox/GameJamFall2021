@@ -19,4 +19,9 @@ public class DialoguePrompt : Interactable
         dialogueTyper.TypeText("I ate a pizza today");
         return true;
     }
+
+    public override void executeInteractable()
+    {
+        throw new System.NotImplementedException();
+    }
 }

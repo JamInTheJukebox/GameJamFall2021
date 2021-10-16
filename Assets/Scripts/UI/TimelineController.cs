@@ -57,6 +57,7 @@ public class TimelineController : MonoBehaviour
         envController = FindObjectOfType<EnvironmentController>();
         testPlayerAnim = FindObjectOfType<Test_AnimationTimeline>();
     }
+
     private void Start()
     {
         envController.SetEnvironment(currentTime);

@@ -1,16 +1,42 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class Item : Interactable
 {
-    // item Scriptable Object here.
-    public override bool Interact(Vector2 targetPos)
+    [SerializeField] ItemScriptable itemInformation;
+    protected UnityAction<ItemScriptable> interactAction;           // specify what kind of information we are passing in with this action
+    [SerializeField] bool TouchToInteract;
+
+    private void Start()
     {
-        if (base.Interact(targetPos))
+        interactAction += MasterUserInterface.instance.ItemUIController.collectItem;
+        //eventListener.AddListener();
+    }
+
+    public override bool Interact(Vector2 targetPos)        // did we successfully interact with the item?
+    {
+        if (!TouchToInteract && base.Interact(targetPos))
         {
-            return false; // failed to get the item
+            return true; // failed to get the item
         }
-   
-        // get the item
-        return true;
+
+        // failed to get the item   
+        return false;
+    }
+
+    public override void executeInteractable()
+    {
+        interactAction?.Invoke(itemInformation);           // pass in the item we collect!
+        gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!TouchToInteract) { return; }
+       
+        if (collision.gameObject.tag == Tags.PLAYER)
+        {
+            executeInteractable();
+        }
     }
 }
