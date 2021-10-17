@@ -18,19 +18,4 @@ public class Test_AnimationTimeline : MonoBehaviour
     {
         transitionAnim.Play("tempPlayerAnim");
     }
-
-    public void ChangeEnvironment()
-    {
-
-    }
-
-    public void FadeBackground()
-    {
-
-    }
-
-    public void UnfadeBackground()
-    {
-
-    }
 }

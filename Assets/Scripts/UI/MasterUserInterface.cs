@@ -9,6 +9,7 @@ public class MasterUserInterface : MonoBehaviour
     [SerializeField] TimelineController timelineController;
     [SerializeField] ItemUIController itemUIController;
     [SerializeField] Timer timerController;
+    [SerializeField] PauseMenu pauseMenu;
 
     public TimelineController TimelineController { get => timelineController; set => timelineController = value; }
     public ItemUIController ItemUIController { get => itemUIController; set => itemUIController = value; }
@@ -19,5 +20,8 @@ public class MasterUserInterface : MonoBehaviour
         instance = this;
     }
 
-    
+    public void enablePausing(bool newState)
+    {
+        pauseMenu.enablePausing(newState);
+    }
 }

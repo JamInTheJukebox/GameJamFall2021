@@ -21,7 +21,7 @@ public class TimelineController : MonoBehaviour
                 // set timer to avoid changing time again during transition.
                 isChangingTime = true;
                 SetActiveButtonColor();
-                testPlayerAnim.StartTransition();
+                //testPlayerAnim.StartTransition();
                 envController.StartTransition();
                 StartCoroutine(ClockFadeColor(GetActiveButtonColor().pressedColor, 0, true));
             }

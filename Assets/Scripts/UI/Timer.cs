@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance?.enablePausing(true);
+        MasterUserInterface.instance?.enablePausing(true);
     }
 
     private void Update()

@@ -9,9 +9,4 @@ public class MainMenu : MonoBehaviour
     {
         GameManager.instance.ChangeScene("David");
     }
-
-    private void Awake()
-    {
-        GameManager.instance.enablePausing(false);
-    }
 }

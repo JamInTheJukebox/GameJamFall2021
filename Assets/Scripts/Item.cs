@@ -5,7 +5,6 @@ public class Item : Interactable
 {
     [SerializeField] ItemScriptable itemInformation;
     protected UnityAction<ItemScriptable> interactAction;           // specify what kind of information we are passing in with this action
-    [SerializeField] bool TouchToInteract;
 
     private void Start()
     {

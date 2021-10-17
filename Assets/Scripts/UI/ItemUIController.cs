@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
 public class ItemUIController : MonoBehaviour
 {
     // collect an item by storing it in this list.
