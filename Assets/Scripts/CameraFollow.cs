@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-public class Camera_follow : MonoBehaviour
+public class CameraFollow : MonoBehaviour
 {
-    public CharacterMovement target;
+    public Transform target;
     public bool isFollowing = true;
     private float zPosition;
     private Vector3 velocity = Vector3.zero;
@@ -13,12 +13,16 @@ public class Camera_follow : MonoBehaviour
     void Awake()
     {
         zPosition = transform.position.z;
-        target = FindObjectOfType<CharacterMovement>();
+        target = FindObjectOfType<CharacterMovement>().transform;
 
     }
 
     void LateUpdate()
     {
+        if(!target) {
+            Debug.LogWarning("CameraFollow.cs: Unassigned target. Camera will not follow anything!");
+            return;
+        }
         var temp = target.transform.position;
         if (isFollowing)
         {

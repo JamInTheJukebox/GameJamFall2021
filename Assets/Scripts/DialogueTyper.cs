@@ -11,6 +11,7 @@ public class DialogueTyper : MonoBehaviour
     private void Awake()
     {
         dialogueTextContainer = GetComponent<TextMeshProUGUI>();
+        dialogueTextContainer.text = "";
     }
 
     private void Update()

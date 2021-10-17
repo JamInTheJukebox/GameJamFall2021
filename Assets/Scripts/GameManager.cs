@@ -27,8 +27,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] Animator loadingAnimation;
     int loadFadeIn; int loadFadeOut;
 
-    [SerializeField] PauseMenu pauseMenu;
-
     private void Awake()
     {
         if(instance == null)
@@ -66,8 +64,4 @@ public class GameManager : MonoBehaviour
         loadingBar.value = 0;
     }
 
-    public void enablePausing(bool newState)
-    {
-        pauseMenu.enablePausing(newState);
-    }
 }
