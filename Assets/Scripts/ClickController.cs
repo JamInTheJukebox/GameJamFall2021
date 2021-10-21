@@ -5,6 +5,8 @@ using UnityEngine;
 public class ClickController : MonoBehaviour
 {
     // Update is called once per frame
+    public LayerMask InteractableLayer;
+
     void Update() { 
 
         if (Input.GetMouseButtonDown(0))
@@ -12,7 +14,7 @@ public class ClickController : MonoBehaviour
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
-            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero,Mathf.Infinity, InteractableLayer);
             if (hit.collider != null)
             {
                 Debug.Log(hit.collider.gameObject.name);

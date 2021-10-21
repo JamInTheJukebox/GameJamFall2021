@@ -9,7 +9,7 @@ public class TestScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            print("HAEY DTHERE!!");
+            // instantiate the game manager interface
         }
     }
 #endif

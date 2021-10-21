@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 227122448}
   - component: {fileID: 227122447}
   - component: {fileID: 227122446}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Seed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,8 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinimumSquareDistance: 400
-  itemInformation: {fileID: 11400000, guid: 531eff7ea08947a40ad6997b31b9ac29, type: 2}
   TouchToInteract: 0
+  itemInformation: {fileID: 11400000, guid: 531eff7ea08947a40ad6997b31b9ac29, type: 2}
 --- !u!61 &227122447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 998713010}
   - component: {fileID: 998713009}
   - component: {fileID: 998713008}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Seed (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,8 +666,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinimumSquareDistance: 400
-  itemInformation: {fileID: 11400000, guid: 66b845403851b54408242ce6601e9301, type: 2}
   TouchToInteract: 1
+  itemInformation: {fileID: 11400000, guid: 66b845403851b54408242ce6601e9301, type: 2}
 --- !u!61 &998713009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1346,7 +1346,7 @@ GameObject:
   - component: {fileID: 1743154322}
   - component: {fileID: 1743154321}
   - component: {fileID: 1743154320}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Seed (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1366,8 +1366,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinimumSquareDistance: 400
-  itemInformation: {fileID: 11400000, guid: 531eff7ea08947a40ad6997b31b9ac29, type: 2}
   TouchToInteract: 1
+  itemInformation: {fileID: 11400000, guid: 531eff7ea08947a40ad6997b31b9ac29, type: 2}
 --- !u!61 &1743154321
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1653,7 +1653,7 @@ GameObject:
   - component: {fileID: 1790499069}
   - component: {fileID: 1790499067}
   - component: {fileID: 1790499068}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1673,8 +1673,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinimumSquareDistance: 400
-  itemInformation: {fileID: 11400000, guid: a63b30a1b0d08df4a9262c45ba3335c1, type: 2}
   TouchToInteract: 0
+  itemInformation: {fileID: 11400000, guid: a63b30a1b0d08df4a9262c45ba3335c1, type: 2}
 --- !u!61 &1790499068
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1775,14 +1775,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1789472270374849521, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789472270374849521, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789472270374849521, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1789472270374849524, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
