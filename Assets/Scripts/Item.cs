@@ -5,6 +5,7 @@ public class Item : Interactable
 {
     [SerializeField] ItemScriptable itemInformation;
     protected UnityAction<ItemScriptable> interactAction;           // specify what kind of information we are passing in with this action
+    public UnityEvent onPickUp;
 
     private void Start()
     {
@@ -26,6 +27,7 @@ public class Item : Interactable
     public override void executeInteractable()
     {
         interactAction?.Invoke(itemInformation);           // pass in the item we collect!
+        onPickUp?.Invoke();
         gameObject.SetActive(false);
     }
 

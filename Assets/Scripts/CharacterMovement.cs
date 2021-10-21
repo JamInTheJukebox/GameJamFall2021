@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// Test for github error
 
 public class CharacterMovement : MonoBehaviour
 {
