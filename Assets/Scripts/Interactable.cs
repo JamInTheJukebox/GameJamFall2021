@@ -15,5 +15,9 @@ public abstract class Interactable : MonoBehaviour
         return Vector2.SqrMagnitude(distVector) < MinimumSquareDistance;
     }
 
+    public virtual bool Interact(Vector2 targetPos, Items selectedItem)     // making items interact with stuff
+    {
+        return Interact(targetPos);
+    }
     public abstract void executeInteractable();
 }

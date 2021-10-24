@@ -9,7 +9,7 @@ public class Item : Interactable
 
     private void Start()
     {
-        interactAction += MasterUserInterface.instance.ItemUIController.collectItem;
+        interactAction += MasterUserInterface.instance.ItemUIController.CollectItem;
         //eventListener.AddListener();
     }
 

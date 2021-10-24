@@ -20,7 +20,7 @@ public class ItemUIController : MonoBehaviour
             {
                 // subscribe new event here to "interact event"
                 m_equippedItem = value;
-                ItemPNG.sprite = m_equippedItem.itemSprite;
+                UpdateItemSprite();
                 UpdateCursor();
                 UpdateCounter();
             }
@@ -38,7 +38,12 @@ public class ItemUIController : MonoBehaviour
                 if(value >= inventoryItems.Count) { m_inventoryIndex = 0; }
                 else if(value < 0) { m_inventoryIndex = inventoryItems.Count - 1; }
                 else { m_inventoryIndex = value; }
-
+                if(inventoryItems.Count == 0)   // inventory is empty
+                {
+                    ItemPNG.sprite = null;
+                    usingItem = false;
+                    return;
+                }
                 equippedItem = inventoryItems[m_inventoryIndex];
             }
         }
@@ -75,18 +80,62 @@ public class ItemUIController : MonoBehaviour
         if (equippedItem == null)
             TextDisplayParent?.SetActive(false);        // disable the text Display
     }
-    public void collectItem(ItemScriptable newItem)
+    public void CollectItem(ItemScriptable newItem)
     {
         if(!inventoryItems.Any(x => x.itemType == newItem.itemType))     // we do not want the same item in the inventory!
         {
-            inventoryItems.Add(newItem);
-            equippedItem = newItem;
+            var itemToAdd = createItemInstance(newItem);
+            inventoryItems.Add(itemToAdd);
+            equippedItem = itemToAdd;
             inventoryIndex = inventoryItems.Count - 1;
             usingItem = false;
         }
     }
 
-    public void toggleItem()            // equip and unequip an item.
+    ItemScriptable createItemInstance(ItemScriptable original)     // create instances of scriptable objects to avoid altering the values observed in the project files.
+    {
+        switch (original.itemType)
+        {
+            case Items.waterCan:
+            {
+                var copy = ScriptableObject.CreateInstance<Waterbucket>();
+                copy.init((Waterbucket)original);
+                return copy;
+            }
+            default:
+            {
+                var copy = ScriptableObject.CreateInstance<ItemScriptable>();
+                    copy.init(original);
+                return copy;
+            }
+        }
+    }
+
+    public void UseItem()
+    {
+        // do a check if we can use the item here.
+        equippedItem.UseItem();                 
+        if (equippedItem.itemUses == 0)     // should be dependent on a variable("Use counter")
+            RemoveItem();
+        UpdateCursor();
+        UpdateCounter();
+        UpdateItemSprite();
+        UpdateItemColors();
+    }
+
+    public void UseItem(Interactable ObjectToInteractWith)
+    {
+        // do a check if we can use the item here.
+        equippedItem.UseItem(ObjectToInteractWith);
+        //if (equippedItem.itemUses == 0)
+            //RemoveItem();
+        UpdateCursor();
+        UpdateCounter();
+        UpdateItemSprite();
+        UpdateItemColors();
+    }
+
+    public void ToggleItem()            // equip and unequip an item.
     {
         if(equippedItem == null) { return; }
         usingItem = !usingItem;
@@ -98,22 +147,39 @@ public class ItemUIController : MonoBehaviour
         inventoryIndex += delta;
     }
 
-    public void removeItem()
+    public void RemoveItem()
     {
         // remove an item that has been depleted.
+        inventoryItems.Remove(equippedItem);
+        inventoryIndex--;
     }
 
-    public bool isUsingItem()
+    public bool IsUsingItem()
     {
         return usingItem;
     }
 
+    public Items GetItemInUse()
+    {
+        if (equippedItem == null || !IsUsingItem())         // if we have no items or we aren't using an item, return none.
+            return Items.None;
+        return equippedItem.itemType;
+    }
+
+
     #region UpdateFunctions
+
+    private void UpdateItemSprite()
+    {
+        ItemPNG.sprite = equippedItem.itemSprite;
+    }
+
     private void UpdateCounter()
     {
         TextDisplayParent.SetActive(equippedItem.itemUses != 0);
         TextDisplay.text = equippedItem.itemUses.ToString();
     }
+
     private void UpdateCursor()
     {
         if (usingItem)
@@ -134,7 +200,7 @@ public class ItemUIController : MonoBehaviour
         }
     }
 
-    private void UpdateItemColors()
+    private void UpdateItemColors()         // makes the circle around the item either yellow(Indicates item is in use) or white(Item not it use)
     {
         var colors = EnableItemButton.colors;
         colors.normalColor = (usingItem) ? ItemActiveColor : Color.white;
