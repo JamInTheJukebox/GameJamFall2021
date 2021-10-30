@@ -30,6 +30,6 @@ public class Tags
 }
 public class SceneNames
 {
-    public const string USER_INTERFACE = "UserInterface";
+    public const string GAME_MANAGER = "GameManager";
     public const string MAIN_MENU = "MainMenu";
 }

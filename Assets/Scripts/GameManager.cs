@@ -40,7 +40,15 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScene(string newScene)
     {
+        if(CheckSceneValidation(newScene) < 0) { Debug.LogError("GameManager.cs: Scene not found in build settings"); return; }
         StartCoroutine(loadLevelAsynchronously(newScene));
+    }
+    private int CheckSceneValidation(string sceneName)
+    {
+        var checkIndex = SceneUtility.GetBuildIndexByScenePath("Scenes/" + sceneName);
+        checkIndex = (checkIndex < 0) ? SceneUtility.GetBuildIndexByScenePath("Scenes/Levels/" + sceneName) : checkIndex;
+        return checkIndex;
+
     }
     IEnumerator loadLevelAsynchronously(string newScene)
     {

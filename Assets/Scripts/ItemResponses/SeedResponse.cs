@@ -17,7 +17,10 @@ public class SeedResponse : GenericEvent
         // failed to get the item   
         return false;
     }
-
+    public override bool Interact(Vector2 targetPos)
+    {
+        return base.Interact(targetPos);
+    }
     public override void executeInteractable()
     {
         // we'll probably use this to update the status of this gameobject in all 3 timelines.

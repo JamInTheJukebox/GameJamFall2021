@@ -14,6 +14,7 @@ public class MasterUserInterface : MonoBehaviour
     public TimelineController TimelineController { get => timelineController; set => timelineController = value; }
     public ItemUIController ItemUIController { get => itemUIController; set => itemUIController = value; }
     public Timer TimerController { get => timerController; set => timerController = value; }
+    public PauseMenu PauseMenu { get => pauseMenu; set => pauseMenu = value; }
 
     private void Awake()
     {
@@ -22,6 +23,6 @@ public class MasterUserInterface : MonoBehaviour
 
     public void enablePausing(bool newState)
     {
-        pauseMenu.enablePausing(newState);
+        PauseMenu.enablePausing(newState);
     }
 }

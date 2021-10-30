@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/David.unity
     guid: f4f3395367c21ba4fa78de29ff204585
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_1.unity
+    guid: b84b1dd7139c3b14d9d8fd49a92af0fe
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_2.unity
+    guid: 091aad95ab2b0e2438dc6f4ad3864fa3
   m_configObjects: {}

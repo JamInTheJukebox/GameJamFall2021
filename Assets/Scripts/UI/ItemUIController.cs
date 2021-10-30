@@ -38,9 +38,11 @@ public class ItemUIController : MonoBehaviour
                 if(value >= inventoryItems.Count) { m_inventoryIndex = 0; }
                 else if(value < 0) { m_inventoryIndex = inventoryItems.Count - 1; }
                 else { m_inventoryIndex = value; }
+                m_inventoryIndex = Mathf.Clamp(m_inventoryIndex, 0, inventoryItems.Count);
                 if(inventoryItems.Count == 0)   // inventory is empty
                 {
-                    ItemPNG.sprite = null;
+                    ItemPNG.sprite = defaultItemPanelSprite;
+                    TextDisplayParent.SetActive(false);
                     usingItem = false;
                     return;
                 }
@@ -68,6 +70,7 @@ public class ItemUIController : MonoBehaviour
 
     [Header("Panels")]
     [SerializeField] Image ItemPNG;
+    [SerializeField] Sprite defaultItemPanelSprite;
     [SerializeField] Button EnableItemButton;
     [SerializeField] TextMeshProUGUI TextDisplay;
     [SerializeField] GameObject TextDisplayParent;
@@ -80,6 +83,7 @@ public class ItemUIController : MonoBehaviour
         if (equippedItem == null)
             TextDisplayParent?.SetActive(false);        // disable the text Display
     }
+
     public void CollectItem(ItemScriptable newItem)
     {
         if(!inventoryItems.Any(x => x.itemType == newItem.itemType))     // we do not want the same item in the inventory!
@@ -113,10 +117,13 @@ public class ItemUIController : MonoBehaviour
 
     public void UseItem()
     {
-        // do a check if we can use the item here.
-        equippedItem.UseItem();                 
-        if (equippedItem.itemUses == 0)     // should be dependent on a variable("Use counter")
+        equippedItem.UseItem();
+        if (!equippedItem.KeepItem())
+        {
             RemoveItem();
+            return;
+        }
+
         UpdateCursor();
         UpdateCounter();
         UpdateItemSprite();
@@ -127,8 +134,12 @@ public class ItemUIController : MonoBehaviour
     {
         // do a check if we can use the item here.
         equippedItem.UseItem(ObjectToInteractWith);
-        //if (equippedItem.itemUses == 0)
-            //RemoveItem();
+        if(!equippedItem.KeepItem())
+        {
+            RemoveItem();
+            return;
+        }
+
         UpdateCursor();
         UpdateCounter();
         UpdateItemSprite();
@@ -151,6 +162,8 @@ public class ItemUIController : MonoBehaviour
     {
         // remove an item that has been depleted.
         inventoryItems.Remove(equippedItem);
+        Destroy(equippedItem);
+        usingItem = false;
         inventoryIndex--;
     }
 
@@ -159,13 +172,12 @@ public class ItemUIController : MonoBehaviour
         return usingItem;
     }
 
-    public Items GetItemInUse()
+    public Items GetItemTypeInUse()
     {
         if (equippedItem == null || !IsUsingItem())         // if we have no items or we aren't using an item, return none.
             return Items.None;
         return equippedItem.itemType;
     }
-
 
     #region UpdateFunctions
 
@@ -190,7 +202,7 @@ public class ItemUIController : MonoBehaviour
             }
             else
             {
-                // make it glow;
+                // make it glow?
             }
         }
         else

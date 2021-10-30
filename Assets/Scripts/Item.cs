@@ -5,7 +5,6 @@ public class Item : Interactable
 {
     [SerializeField] ItemScriptable itemInformation;
     protected UnityAction<ItemScriptable> interactAction;           // specify what kind of information we are passing in with this action
-    public UnityEvent onPickUp;
 
     private void Start()
     {
@@ -23,11 +22,15 @@ public class Item : Interactable
         // failed to get the item   
         return false;
     }
-
+    public override bool Interact(Vector2 targetPos, Items selectedItem)     // making items interact with stuff
+    {
+        print("lol");
+        return false;   // do not allow item to item interaction by default. Save this child classes(mixing items, for example).
+    }
     public override void executeInteractable()
     {
         interactAction?.Invoke(itemInformation);           // pass in the item we collect!
-        onPickUp?.Invoke();
+        onInteract?.Invoke();
         gameObject.SetActive(false);
     }
 

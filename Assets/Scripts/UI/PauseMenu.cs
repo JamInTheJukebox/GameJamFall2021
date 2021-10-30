@@ -22,7 +22,7 @@ public class PauseMenu : MonoBehaviour
     private bool canPauseAgain = true;
 
     int m_pauseState = 0;
-    public int pauseState
+    public int pauseState   // 0 -> 1 = pause, 1 -> 0, unpause
     {
         get { return m_pauseState; }
         set
@@ -39,7 +39,6 @@ public class PauseMenu : MonoBehaviour
                     m_pauseState = 0;
                 }
                 PauseMenuAnim.SetInteger("PausedState", m_pauseState);
-                print("Lol");
             }
         }
     }
@@ -81,5 +80,10 @@ public class PauseMenu : MonoBehaviour
         PauseMenuAnim.Play("PauseDefaultState");
         enablePausing(false);
         GameManager.instance.ChangeScene(SceneNames.MAIN_MENU);         // change to level select in the future.
+    }
+
+    public bool isPaused()
+    {
+        return pauseState == 1;
     }
 }

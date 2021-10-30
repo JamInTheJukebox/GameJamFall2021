@@ -7,7 +7,7 @@ public class Waterbucket : ItemScriptable
     [SerializeField] Texture2D EmptyWaterBucketCursor;
     [SerializeField] Sprite EmptyWaterBucketSprite;
     [SerializeField] bool m_Filled;
-    [SerializeField] bool Filled
+    bool Filled
     {
         get { return m_Filled; }
         set

@@ -8,6 +8,7 @@ public abstract class Interactable : MonoBehaviour
     [SerializeField] float MinimumSquareDistance = 400;
     //protected UnityAction<ItemScriptable> interactAction;           // specify what kind of information we are passing in with this action
     [SerializeField] protected bool TouchToInteract;
+    public UnityEvent onInteract;
 
     public virtual bool Interact(Vector2 targetPos)
     {
@@ -17,6 +18,7 @@ public abstract class Interactable : MonoBehaviour
 
     public virtual bool Interact(Vector2 targetPos, Items selectedItem)     // making items interact with stuff
     {
+        print("1");
         return Interact(targetPos);
     }
     public abstract void executeInteractable();

@@ -14,18 +14,19 @@ public class ItemScriptable : ScriptableObject
 
     public Texture2D cursorImage;
 
+    [Header("Limited Use Settings")]
     public int itemUses = 0;
+    public bool useCounter = false;
 
     public virtual void UseItem(Interactable newInteractable)       // use the item!
     {
-        newInteractable.executeInteractable();
+        newInteractable.executeInteractable();  // if we successfully used the item, decrement. Make the executeInteractable return int/Bool instead of void in the future.
         if (itemUses > 0)
             itemUses--;
     }
 
     public virtual void UseItem()       // use the item!
     {
-
         if (itemUses > 0)
             itemUses--;
     }
@@ -33,6 +34,14 @@ public class ItemScriptable : ScriptableObject
 
     public virtual void SetItemImage() { }
 
+    public virtual bool CanUseItem() {
+        return true;
+    }   // add custom cooldowns to items with counters.
+
+    public virtual bool KeepItem()       // conditions to destroy the item we are using.
+    {
+        return itemUses > 0 || !useCounter;
+    }
     public void init(ItemScriptable SO)      // used for creating instances of objects
     {
         cursorImage = SO.cursorImage;
@@ -41,5 +50,6 @@ public class ItemScriptable : ScriptableObject
         itemAvailable = SO.itemAvailable;
         itemUses = SO.itemUses;
         requiresInteractable = SO.requiresInteractable;
+        useCounter = SO.useCounter;
     }
 }
