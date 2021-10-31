@@ -30,6 +30,6 @@ public class GenericEvent : Interactable
 
     public override void executeInteractable()
     {
-        print("Watch it grow!!"); 
+        onInteract.Invoke();
     }
 }
