@@ -1,77 +1,99 @@
 ﻿using UnityEngine;
 using TMPro;
 using System.Collections;
+using System.Collections.Generic;
+using System.Collections;
+using UnityEngine.UI;
 
 public class DialogueTyper : MonoBehaviour
 {
-    TextMeshProUGUI dialogueTextContainer;
-    public bool CanSkipDialogue;
-    private bool skipDialogue;
+    [SerializeField] Image CharacterPortrait;
+    [SerializeField] TextMeshProUGUI dialogueTextContainer;
+    [SerializeField] GameObject NextDialogueIndicator;
+    Animator dialogueAnimator;
+
+    private bool skipDialogueTyping;
+    private bool proceedToNextDialogue;
+    int loadFadeIn, loadFadeOut;
     [SerializeField] float textScrollTime = 0.01f;
+    Coroutine currentConversation;      // do not allow more than two conversations to go simultaneously.
     private void Awake()
     {
-        dialogueTextContainer = GetComponent<TextMeshProUGUI>();
+        if(dialogueTextContainer == null)
+            dialogueTextContainer = GetComponent<TextMeshProUGUI>();
         dialogueTextContainer.text = "";
+        dialogueAnimator = GetComponent<Animator>();
+        loadFadeIn = Animator.StringToHash(AnimationTags.DIALOGUE_IN);
+        loadFadeOut = Animator.StringToHash(AnimationTags.DIALOGUE_OUT);
     }
 
     private void Update()
     {
-        if(CanSkipDialogue && Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            skipDialogue = true;
+            SkipDialogue();
         }
     }
-    public void TypeText(string txt)
+    public void TypeText(List<Conversation> typertest)
     {
-        dialogueTextContainer.text = "";
-        StartCoroutine(typeText(txt));
+        if(currentConversation == null)
+        {
+            dialogueTextContainer.text = "";
+            currentConversation = StartCoroutine(typeText(typertest));
+        }
     }
 
-    IEnumerator typeText(string txt)
+    IEnumerator typeText(List<Conversation> typertest)
     {
-        char[] SentenceCharacters = txt.ToCharArray();
-        foreach (char charline in SentenceCharacters)
+        dialogueAnimator.Play(loadFadeIn);
+        foreach (Conversation type in typertest)
         {
-            if (skipDialogue)
+            if (type.profile == null)
             {
-                dialogueTextContainer.text = txt;     // if we press space, we can end the dialogue early.
-                Debug.Log("QuittingDialogue");
-                yield return null;
-                break;
+                CharacterPortrait.gameObject.SetActive(false);
             }
-            dialogueTextContainer.text += charline;
-            yield return new WaitForSeconds(textScrollTime); // when a character is done printing, wait for x seconds to print the next character
+            else
+            {
+                CharacterPortrait.gameObject.SetActive(true);
+                CharacterPortrait.sprite = type.profile.GetCharacterSprite();
+            }
+            NextDialogueIndicator.SetActive(false);
+            dialogueTextContainer.text = "";
+            char[] SentenceCharacters = type.line.ToCharArray();
+            foreach (char charline in SentenceCharacters)
+            {
+                if (skipDialogueTyping)
+                {
+                    dialogueTextContainer.text = type.line;     // if we press space, we can end the dialogue early.
+                    yield return null;
+                    break;
+                }
+                dialogueTextContainer.text += charline;
+                yield return new WaitForSeconds(textScrollTime); // when a character is done printing, wait for x seconds to print the next character
+            }
+            yield return null;                                  // do not get the previous space input.
+            NextDialogueIndicator.SetActive(true);
+            yield return new WaitUntil(() => proceedToNextDialogue);
+            skipDialogueTyping = false;
+            proceedToNextDialogue = false;
+            yield return null;
         }
-        yield return null;                                  // do not get the previous space input.
-        //yield return waitForKeyPress(KeyCode.Space);      // If you want to press spacebar to proceed to the next dialogue, uncomment this and make appropriate adjustments to the set buttons function.
-        skipDialogue = false;
-        yield return null;
+        CloseDialogueBox();
     }
 
-    /*
-    public IEnumerator Speak(string dialogueLines, string name)
+    private void CloseDialogueBox()
     {
-        DialogueTextContainer.text = "";
-        char[] SentenceCharacters = dialogueLines.ToCharArray();
-        NameTextContainer.text = name;
-        foreach (char charline in SentenceCharacters)
-        {
-            if (SkipDialogue)
-            {
-                DialogueTextContainer.text = dialogueLines;     // if we press space, we can end the dialogue early.
-                Debug.Log("QuittingDialogue");
-                yield return null;
-                break;
-            }
-            DialogueTextContainer.text += charline;
-            yield return new WaitForSeconds(TextScrollTime); // when a character is done printing, wait for x seconds to print the next character
-        }
-        yield return null;                                  // do not get the previous space input.
-        //yield return waitForKeyPress(KeyCode.Space);      // If you want to press spacebar to proceed to the next dialogue, uncomment this and make appropriate adjustments to the set buttons function.
-        SkipDialogue = false;
-        yield return null;
-        SetButtons(actionText, actions);        // set up next dialogue Button.
-        // spawn next choice button here.
-    }*/
+        dialogueAnimator.Play(loadFadeOut);
+        currentConversation = null;
+    }
 
+    public void SkipDialogue()
+    {
+        if (MasterUserInterface.instance.isPaused())
+            return;
+        if (skipDialogueTyping)
+            proceedToNextDialogue = true;
+        skipDialogueTyping = true;
+        
+    }
 }

@@ -18,7 +18,6 @@ public abstract class Interactable : MonoBehaviour
 
     public virtual bool Interact(Vector2 targetPos, Items selectedItem)     // making items interact with stuff
     {
-        print("1");
         return Interact(targetPos);
     }
     public abstract void executeInteractable();

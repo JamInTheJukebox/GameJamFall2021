@@ -325,7 +325,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MinimumSquareDistance: 400
-  Dialogue: 
+  TouchToInteract: 0
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  dialogueTyper: {fileID: 0}
+  conversation: []
 --- !u!114 &3381888444841509868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +343,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f414338050ec843944c0ae87cff348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanSkipDialogue: 0
+  CharacterPortrait: {fileID: 0}
+  dialogueTextContainer: {fileID: 0}
+  NextDialogueIndicator: {fileID: 0}
   textScrollTime: 0.25
 --- !u!1 &3381888445023269750
 GameObject:

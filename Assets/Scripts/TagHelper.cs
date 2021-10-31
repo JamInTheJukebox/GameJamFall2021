@@ -20,6 +20,8 @@ public class AnimationTags
     // insert animation tags here
     public const string LOAD_FADEIN = "LoadingFadeIn";
     public const string LOAD_FADEOUT = "LoadingFadeOut";
+    public const string DIALOGUE_IN = "DialoguePanelOpen";
+    public const string DIALOGUE_OUT = "DialoguePanelClose";
 }
 
 public class Tags

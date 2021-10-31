@@ -3,17 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using System;
 
 public class DialoguePrompt : Interactable
 {
-    [SerializeField] DialogueTyper typer;
-    [TextArea(15, 5)] [SerializeField] string Dialogue;
-    public UnityAction<string> onSendText;
+    [SerializeField] DialogueTyper dialogueTyper;
+    [SerializeField] List<Conversation> conversation = new List<Conversation>();
+    public UnityAction<List<Conversation>> onSendText;
 
-    private void Awake()
+    private void Start()
     {
-        if (typer != null)
-            onSendText += typer.TypeText;
+        if(dialogueTyper == null)
+        {
+            dialogueTyper = MasterUserInterface.instance.DialogueTyper;
+        }
+        if (dialogueTyper != null)
+            onSendText += dialogueTyper.TypeText;
+        else
+            Destroy(gameObject);
     }
     public override bool Interact(Vector2 targetPos)
     {
@@ -28,8 +35,7 @@ public class DialoguePrompt : Interactable
 
     public override void executeInteractable()
     {
-        print("executing");
-        onSendText?.Invoke(Dialogue);
+        onSendText?.Invoke(conversation);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -38,8 +44,14 @@ public class DialoguePrompt : Interactable
 
         if (collision.gameObject.tag == Tags.PLAYER)
         {
-            print("sending");
             executeInteractable();
         }
     }
+}
+[Serializable]
+public struct Conversation
+{
+    public DialogueProfile_SO profile;
+    public string line;
+    // text animation?
 }
