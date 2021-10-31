@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelUIGenerator : MonoBehaviour
 {
     [SerializeField] GameObject LevelPrefab;
-    int LevelsSoFar = 10;
+    int LevelsSoFar = 30;
     private void Awake()
     {
         for(int i = 0; i < LevelsSoFar; i++)
