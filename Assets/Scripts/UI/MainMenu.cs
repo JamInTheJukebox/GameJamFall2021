@@ -17,4 +17,8 @@ public class MainMenu : MonoBehaviour
     {
         GameManager.instance.ChangeScene("David");
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
