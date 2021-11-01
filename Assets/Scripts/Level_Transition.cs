@@ -16,4 +16,9 @@ public class Level_Transition : MonoBehaviour
         SceneName = "Level_" + i;
         GameManager.instance.ChangeScene(SceneName);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GoToNextLevel();
+    }
 }

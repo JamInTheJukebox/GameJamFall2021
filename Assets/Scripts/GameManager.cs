@@ -70,6 +70,8 @@ public class GameManager : MonoBehaviour
         loadingAnimation.Play(loadFadeOut);
         loadingBar.gameObject.SetActive(false);
         loadingBar.value = 0;
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(newScene));
+
     }
 
 }
