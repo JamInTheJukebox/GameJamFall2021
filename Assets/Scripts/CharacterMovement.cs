@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     private SpriteRenderer mySpriteRenderer;
+    bool canMovePlayer = true;   
     public float horizontalSpeed = 8;
     Rigidbody2D rb;
     // Awake is called as soon as player presses play
@@ -14,8 +15,20 @@ public class CharacterMovement : MonoBehaviour
         mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void Start()
+    {
+        // setup delegate
+        MasterUserInterface.instance.TimelineController.TimelineChangeListener += ToggleMovement;
+    }
+
     // Update is called once per frame
     void Update()
+    {
+        if(canMovePlayer)
+            MovePlayer();
+    }
+
+    private void MovePlayer()
     {
         var vel = Input.GetAxis("Horizontal") * horizontalSpeed;
         rb.velocity = new Vector2(vel, rb.velocity.y);
@@ -34,5 +47,12 @@ public class CharacterMovement : MonoBehaviour
                 mySpriteRenderer.flipX = false;
             }
         }
+    }
+
+    public void ToggleMovement(bool newState)
+    {
+        canMovePlayer = newState;
+        if (!canMovePlayer)
+            rb.velocity = new Vector2(0,rb.velocity.y);
     }
 }

@@ -21,14 +21,22 @@ public class Well : GenericEvent
     {
         // we'll probably use this to update the status of this gameobject in all 3 timelines.
     }
+    public override int executeInteractable(ItemScriptable item)
+    {
+        Waterbucket bucket = item as Waterbucket;
+        if(bucket == null) { return 0; }
+        ChangeFilledState(bucket.isFilled());
+        int newState = ChangeFilledState(bucket.isFilled()) ? 1 : 0;
+        return newState;
+    }
 
     public bool ChangeFilledState(bool fullWaterBucket)     // true = successful change in state. false = unsuccessful change in state.
     {
         if(Water.activeSelf == fullWaterBucket) // if both are empty or both are full, do nothing
         {
-            return false;
+            return Water.activeSelf;
         }
         Water.SetActive(fullWaterBucket);  // transfer water
-        return true;
+        return Water.activeSelf;
     }
 }

@@ -24,7 +24,6 @@ public class Item : Interactable
     }
     public override bool Interact(Vector2 targetPos, Items selectedItem)     // making items interact with stuff
     {
-        print("lol");
         return false;   // do not allow item to item interaction by default. Save this child classes(mixing items, for example).
     }
     public override void executeInteractable()

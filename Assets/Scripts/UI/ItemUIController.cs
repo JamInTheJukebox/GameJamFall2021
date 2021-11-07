@@ -172,6 +172,11 @@ public class ItemUIController : MonoBehaviour
         return usingItem;
     }
 
+    public void DisableItem()
+    {
+        usingItem = false;
+    }
+
     public Items GetItemTypeInUse()
     {
         if (equippedItem == null || !IsUsingItem())         // if we have no items or we aren't using an item, return none.

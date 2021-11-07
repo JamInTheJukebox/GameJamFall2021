@@ -20,6 +20,7 @@ public class TimelineController : MonoBehaviour
                 m_currentTime = value;
                 // set timer to avoid changing time again during transition.
                 isChangingTime = true;
+                TimelineChangeListener.Invoke(false);
                 SetActiveButtonColor();
                 //testPlayerAnim.StartTransition();
                 envController.StartTransition();
@@ -39,6 +40,9 @@ public class TimelineController : MonoBehaviour
     // references
     EnvironmentController envController;
     Test_AnimationTimeline testPlayerAnim;
+
+    public delegate void changingTimelineListener(bool state);     // false = changing time, true = done.
+    public changingTimelineListener TimelineChangeListener;
     bool isChangingTime = false;
     // Start is called before the first frame update
     void Awake()
@@ -143,5 +147,6 @@ public class TimelineController : MonoBehaviour
         EnableInteractableButtons();
         StartCoroutine(ClockFadeColor(Color.white, 20f));
         isChangingTime = false;
+        TimelineChangeListener.Invoke(true);                             // timeline transition complete!
     }
 }

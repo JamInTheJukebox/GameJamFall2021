@@ -35,10 +35,9 @@ public class Waterbucket : ItemScriptable
     {
         try
         {
-            Well well = (Well)well_Interactable;
-            var newState = well.ChangeFilledState(Filled);
-            if (newState)
-                Filled = !Filled;
+            GenericEvent well = (GenericEvent)well_Interactable;
+            var newState = well.executeInteractable(this);
+            Filled = newState != 1;
         }
         catch
         {
@@ -54,5 +53,10 @@ public class Waterbucket : ItemScriptable
         EmptyWaterBucketCursor = SO.EmptyWaterBucketCursor;
         EmptyWaterBucketSprite = SO.EmptyWaterBucketSprite;
         Filled = SO.Filled;
+    }
+
+    public bool isFilled()
+    {
+        return Filled;
     }
 }
