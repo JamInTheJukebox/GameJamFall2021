@@ -20,7 +20,8 @@ public class ItemScriptable : ScriptableObject
 
     public virtual void UseItem(Interactable newInteractable)       // use the item!
     {
-        newInteractable.executeInteractable();  // if we successfully used the item, decrement. Make the executeInteractable return int/Bool instead of void in the future.
+        var interactable = (GenericEvent)newInteractable;
+        interactable.executeInteractable(this);  // if we successfully used the item, decrement. Make the executeInteractable return int/Bool instead of void in the future.
         if (itemUses > 0)
             itemUses--;
     }

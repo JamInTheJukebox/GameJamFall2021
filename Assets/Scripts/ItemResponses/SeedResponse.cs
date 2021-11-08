@@ -6,11 +6,21 @@ public class SeedResponse : GenericEvent
 {
     public GameObject Plant;
     bool planted;
+    [SerializeField] bool needsWater = true;
+    bool watered;
+
+    private void Awake()
+    {
+        watered = !needsWater;
+    }
 
     public override bool Interact(Vector2 targetPos, Items selectedItem)        // did we successfully interact with the item?
     {
-        if (base.Interact(targetPos) && RequiredItemToInteract == selectedItem)
+        print("Can interact???");
+        print(selectedItem);
+        if (base.Interact(targetPos) && (RequiredItemToInteract == selectedItem || selectedItem == Items.waterCan))
         {
+            print("yes, yes I can");
             return true; // failed to get the item
         }
 
@@ -23,13 +33,36 @@ public class SeedResponse : GenericEvent
     }
     public override void executeInteractable()
     {
-        // we'll probably use this to update the status of this gameobject in all 3 timelines.
-        if(!planted)
-            ChangeState();
+
     }
+    public override int executeInteractable(ItemScriptable item)
+    {
+        // we'll probably use this to update the status of this gameobject in all 3 timelines.
+        if (item.itemType == Items.seed)
+        {
+            if (!planted)
+            {
+                planted = true;
+                ChangeState();
+                return 1;
+            }
+        }
+        else if (item.itemType == Items.waterCan)
+        {
+            if (needsWater)
+            {
+                watered = true;
+                ChangeState();
+                return 1;
+            }
+        }
+
+        return 0;
+    }   
+
     public void ChangeState()       // make this timeline dependent
     {
-        planted = true;
-        Plant.SetActive(true);
+        if(watered && planted)
+            Plant.SetActive(true);
     }
 }

@@ -17,6 +17,8 @@ public class DialogueTyper : MonoBehaviour
     int loadFadeIn, loadFadeOut;
     [SerializeField] float textScrollTime = 0.01f;
     Coroutine currentConversation;      // do not allow more than two conversations to go simultaneously.
+    [SerializeField] AudioClip TypingSound;
+
     private void Awake()
     {
         if(dialogueTextContainer == null)
@@ -43,11 +45,25 @@ public class DialogueTyper : MonoBehaviour
         }
     }
 
+    public void TypeText(Conversation typertest)
+    {
+        if (currentConversation == null)
+        {
+            dialogueTextContainer.text = "";
+            var temp = new List<Conversation>();
+            temp.Add(typertest);
+            currentConversation = StartCoroutine(typeText(temp));
+        }
+    }
+
     IEnumerator typeText(List<Conversation> typertest)
     {
         dialogueAnimator.Play(loadFadeIn);
+        float maxTimeToPlaySound = 0.05f;
+        float currentTimePlayingSound;
         foreach (Conversation type in typertest)
         {
+            currentTimePlayingSound = 0;
             if (type.profile == null)
             {
                 CharacterPortrait.gameObject.SetActive(false);
@@ -62,12 +78,20 @@ public class DialogueTyper : MonoBehaviour
             char[] SentenceCharacters = type.line.ToCharArray();
             foreach (char charline in SentenceCharacters)
             {
+                if(currentTimePlayingSound <= 0)
+                {
+                    AudioManager.Instance.PlaySFX(TypingSound, 0.1f);
+                    currentTimePlayingSound = maxTimeToPlaySound;
+                }
+
                 if (skipDialogueTyping)
                 {
                     dialogueTextContainer.text = type.line;     // if we press space, we can end the dialogue early.
                     yield return null;
                     break;
                 }
+                currentTimePlayingSound -= Time.deltaTime;
+                
                 dialogueTextContainer.text += charline;
                 yield return new WaitForSeconds(textScrollTime); // when a character is done printing, wait for x seconds to print the next character
             }
@@ -85,6 +109,11 @@ public class DialogueTyper : MonoBehaviour
     {
         dialogueAnimator.Play(loadFadeOut);
         currentConversation = null;
+    }
+
+    public bool isTyping()
+    {
+        return currentConversation != null;
     }
 
     public void SkipDialogue()

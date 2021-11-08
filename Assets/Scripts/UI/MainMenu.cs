@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioClip ButtonClickSFX;
+    public AudioClip QuitButtonSFX;
+
     private void Awake()
     {
         if(GameManager.instance == null)
@@ -17,8 +20,19 @@ public class MainMenu : MonoBehaviour
     {
         GameManager.instance.ChangeScene("David");
     }
+
+    public void PlayButtonSFX()
+    {
+        AudioManager.Instance.PlaySFX(ButtonClickSFX);
+    }
+    public void PlayBackSFX()
+    {
+        AudioManager.Instance.PlaySFX(QuitButtonSFX);
+    }
+
     public void QuitGame()
     {
+        PlayBackSFX();
         Application.Quit();
     }
 }

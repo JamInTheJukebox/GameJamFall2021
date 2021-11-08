@@ -32,4 +32,10 @@ public class GenericEvent : Interactable
     {
         onInteract.Invoke();
     }
+
+    public virtual int executeInteractable(ItemScriptable item)
+    {
+        // create a callback in the future.
+        return 0;
+    }
 }
