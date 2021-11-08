@@ -22,6 +22,13 @@ public class AnimationTags
     public const string LOAD_FADEOUT = "LoadingFadeOut";
     public const string DIALOGUE_IN = "DialoguePanelOpen";
     public const string DIALOGUE_OUT = "DialoguePanelClose";
+
+    public const string PLAYER_IDLE = "Animation_Idle_";
+
+    public const string PLAYER_RUN = "Animation_Run_";
+
+    public const string PLAYER_WAND = "Animation_Wand_";
+
 }
 
 public class Tags

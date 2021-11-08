@@ -755,6 +755,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2004940873672012638, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+      propertyPath: runMarginOfError
+      value: 0.000001
+      objectReference: {fileID: 0}
     - target: {fileID: 6815589788519454728, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
       propertyPath: m_Material
       value: 
