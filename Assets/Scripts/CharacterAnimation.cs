@@ -47,11 +47,14 @@ public class CharacterAnimation : MonoBehaviour
             time = "Present";
         else if (timeline.currentTime == Timeline.Future)
             time = "Future";
-        
+        // If changing time
+
+        // If Running
         if (Mathf.Abs(rb.velocity.x) > runMarginOfError)
         {
             tempVari = AnimationTags.PLAYER_RUN;
         }
+        // If Standing still
         else
         {
             tempVari = AnimationTags.PLAYER_IDLE;
