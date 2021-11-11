@@ -134,6 +134,7 @@ public class ItemUIController : MonoBehaviour
     {
         // do a check if we can use the item here.
         equippedItem.UseItem(ObjectToInteractWith);
+        print("object to interact with " + ObjectToInteractWith);
         if(!equippedItem.KeepItem())
         {
             RemoveItem();

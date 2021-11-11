@@ -43,7 +43,7 @@ public class TimelineController : MonoBehaviour
 
     public delegate void changingTimelineListener(bool state);     // false = changing time, true = done.
     public changingTimelineListener TimelineChangeListener;
-    bool isChangingTime = false;
+    public bool isChangingTime = false;
     // Start is called before the first frame update
     void Awake()
     {

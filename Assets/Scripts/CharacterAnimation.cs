@@ -12,7 +12,7 @@ public class CharacterAnimation : MonoBehaviour
         get { return m_State; }
         set
         {
-            if(m_State != value)
+            if (m_State != value)
             {
                 m_State = value;
                 charAnimator.Play(m_State);
@@ -23,12 +23,16 @@ public class CharacterAnimation : MonoBehaviour
     public float runMarginOfError = 0.001f;
     private Animator charAnimator;
     private TimelineController timeline;
-    
+    private SortingOrderScript sortorder;
+    public SortingOrderScript sfxSordingOrderScript;
     private void Awake()
     {
         charAnimator = GetComponent<Animator>();
         timeline = FindObjectOfType<TimelineController>();
         rb = GetComponent<Rigidbody2D>();
+        sortorder = GetComponent<SortingOrderScript>();
+        if (sfxSordingOrderScript == null)
+            sfxSordingOrderScript = GetComponentInChildren<SortingOrderScript>();
     }
 
     // Update is called once per frame
@@ -48,9 +52,12 @@ public class CharacterAnimation : MonoBehaviour
         else if (timeline.currentTime == Timeline.Future)
             time = "Future";
         // If changing time
-
+        if (timeline.isChangingTime)
+        {
+            tempVari = AnimationTags.PLAYER_WAND;
+        }
         // If Running
-        if (Mathf.Abs(rb.velocity.x) > runMarginOfError)
+        else if (Mathf.Abs(rb.velocity.x) > runMarginOfError)
         {
             tempVari = AnimationTags.PLAYER_RUN;
         }
@@ -61,4 +68,11 @@ public class CharacterAnimation : MonoBehaviour
         }
         State = tempVari + time;
     }
+
+    public void SetChangingTimeLineLayer()
+    {
+        sfxSordingOrderScript.SetSortingLayer("TimelineTransition");
+        sortorder.SetSortingLayer("TimelineTransition");
+    }
 }
+    // add method to call change sorting order on both the player and the sfx

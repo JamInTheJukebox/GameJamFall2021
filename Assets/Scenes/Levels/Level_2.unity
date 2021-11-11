@@ -568,9 +568,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8646032579545124408, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646032579545124414, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646032579545124414, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7075472
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646032579545124414, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7075472
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646032579545124414, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7075472
+      objectReference: {fileID: 0}
     - target: {fileID: 8646032579797689443, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646032580314989912, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
       propertyPath: m_RootOrder
@@ -582,7 +602,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646032580569499651, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646032581042403534, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
+      propertyPath: m_SortingOrder
+      value: -221
       objectReference: {fileID: 0}
     - target: {fileID: 8646032581135907438, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
       propertyPath: m_RootOrder
@@ -759,22 +783,54 @@ PrefabInstance:
       propertyPath: runMarginOfError
       value: 0.000001
       objectReference: {fileID: 0}
+    - target: {fileID: 2004940873672012638, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+      propertyPath: sfxSordingOrderScript
+      value: 
+      objectReference: {fileID: 1624607614}
     - target: {fileID: 3894266723310207311, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
       propertyPath: m_Size.x
-      value: 7.98
+      value: 8.18
       objectReference: {fileID: 0}
     - target: {fileID: 3894266723310207311, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
       propertyPath: m_Size.y
-      value: 3.47
+      value: 3.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894266723310207311, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894266723310207311, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894266723310207311, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894266723310207311, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3894266723310207311, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6815589788519454728, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: e8c58b2afb761cd48adaf3cd191b9450, type: 2}
+    - target: {fileID: 8165442313149440937, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165442313149440937, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -204027493
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165442313149440937, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
 --- !u!1 &745702746
@@ -2163,6 +2219,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1624607611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4364569178177916665, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+  m_PrefabInstance: {fileID: 738194811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1624607614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624607611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea035f11250f7441b7fcbb6ba979aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder: 0
 --- !u!1 &1628417152
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,6 +2747,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1833569547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1789472270374849521, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+  m_PrefabInstance: {fileID: 738194811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1833569556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833569547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea035f11250f7441b7fcbb6ba979aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder: 0
 --- !u!4 &1953353097 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8646032580314989912, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
