@@ -39,7 +39,6 @@ public class TimelineController : MonoBehaviour
     public float DefaultClockFadeSpeed;
     // references
     EnvironmentController envController;
-    Test_AnimationTimeline testPlayerAnim;
 
     public delegate void changingTimelineListener(bool state);     // false = changing time, true = done.
     public changingTimelineListener TimelineChangeListener;
@@ -59,7 +58,6 @@ public class TimelineController : MonoBehaviour
         EnableInteractableButtons();
         //references
         envController = FindObjectOfType<EnvironmentController>();
-        testPlayerAnim = FindObjectOfType<Test_AnimationTimeline>();
     }
 
     private void Start()
