@@ -9,7 +9,7 @@ public class DialoguePrompt : Interactable
 {
     [SerializeField] DialogueTyper dialogueTyper;
     [SerializeField] List<Conversation> conversation = new List<Conversation>();
-    public UnityAction<List<Conversation>> onSendText;
+    public UnityAction<List<Conversation>, UnityAction> onSendText;
 
     private void Start()
     {
@@ -35,7 +35,7 @@ public class DialoguePrompt : Interactable
 
     public override void executeInteractable()
     {
-        onSendText?.Invoke(conversation);
+        onSendText?.Invoke(conversation, null);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

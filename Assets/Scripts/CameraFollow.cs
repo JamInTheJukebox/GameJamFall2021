@@ -9,12 +9,16 @@ public class CameraFollow : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     public float smoothTime = 0.3f;
     public float maxSpeed = 40;
+    public bool ScreenBounded = false;      // prevents the screen from moving outside the background.
+    public Vector2 BoundsX;
 
     void Awake()
     {
         zPosition = transform.position.z;
         target = FindObjectOfType<CharacterMovement>().transform;
-
+      
+        if (target)
+            transform.position = new Vector3(target.position.x, target.position.y, zPosition);
     }
 
     void LateUpdate()
@@ -27,8 +31,10 @@ public class CameraFollow : MonoBehaviour
         if (isFollowing)
         {
             temp = new Vector3(temp.x, temp.y, transform.position.z);
+            if(ScreenBounded)
+                temp.x = Mathf.Clamp(temp.x, BoundsX.x, BoundsX.y);
+            //temp.y = Mathf.Clamp(temp.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight);
             transform.position = Vector3.SmoothDamp(transform.position, temp, ref velocity, smoothTime, maxSpeed);
         }
-
     }
 }

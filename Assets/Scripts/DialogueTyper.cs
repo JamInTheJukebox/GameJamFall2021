@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class DialogueTyper : MonoBehaviour
 {
@@ -36,27 +37,27 @@ public class DialogueTyper : MonoBehaviour
             SkipDialogue();
         }
     }
-    public void TypeText(List<Conversation> typertest)
+    public void TypeText(List<Conversation> typertest, UnityAction DialogueDoneResponse = null)
     {
         if(currentConversation == null)
         {
             dialogueTextContainer.text = "";
-            currentConversation = StartCoroutine(typeText(typertest));
+            currentConversation = StartCoroutine(typeText(typertest, DialogueDoneResponse));
         }
     }
 
-    public void TypeText(Conversation typertest)
+    public void TypeText(Conversation typertest, UnityAction DialogueDoneResponse = null)
     {
         if (currentConversation == null)
         {
             dialogueTextContainer.text = "";
             var temp = new List<Conversation>();
             temp.Add(typertest);
-            currentConversation = StartCoroutine(typeText(temp));
+            currentConversation = StartCoroutine(typeText(temp, DialogueDoneResponse));
         }
     }
 
-    IEnumerator typeText(List<Conversation> typertest)
+    IEnumerator typeText(List<Conversation> typertest, UnityAction DialogueDoneResponse = null)
     {
         dialogueAnimator.Play(loadFadeIn);
         float maxTimeToPlaySound = 0.05f;
@@ -102,6 +103,7 @@ public class DialogueTyper : MonoBehaviour
             proceedToNextDialogue = false;
             yield return null;
         }
+        DialogueDoneResponse?.Invoke();                     // execute any callback that arises from finishing the dialogue.
         CloseDialogueBox();
     }
 
