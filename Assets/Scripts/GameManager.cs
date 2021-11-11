@@ -26,7 +26,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] Slider loadingBar;
     [SerializeField] Animator loadingAnimation;
     int loadFadeIn; int loadFadeOut;
-
+    public static bool StartInMainMenu = true;
+    public static string currentLvl;
     private void Awake()
     {
         if(instance == null)
@@ -35,7 +36,14 @@ public class GameManager : MonoBehaviour
         }
         loadFadeIn = Animator.StringToHash(AnimationTags.LOAD_FADEIN);
         loadFadeOut = Animator.StringToHash(AnimationTags.LOAD_FADEOUT);
-        ChangeScene(SceneNames.MAIN_MENU);
+        if (StartInMainMenu)
+        {
+            ChangeScene(SceneNames.MAIN_MENU);
+        }
+        else
+        {
+            ChangeScene(currentLvl);
+        }
     }
 
     public void ChangeScene(string newScene)

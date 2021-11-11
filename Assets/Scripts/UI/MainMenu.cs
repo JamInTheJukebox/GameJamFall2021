@@ -16,11 +16,6 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void GoToLevel1()
-    {
-        GameManager.instance.ChangeScene("David");
-    }
-
     public void PlayButtonSFX()
     {
         AudioManager.Instance.PlaySFX(ButtonClickSFX);

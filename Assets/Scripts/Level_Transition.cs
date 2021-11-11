@@ -5,7 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Level_Transition : MonoBehaviour
 {
-
+    public bool TouchToChangeLevel;
+    private void Awake()
+    {
+        if(GameManager.instance == null)
+        {
+            GameManager.StartInMainMenu = false;
+            GameManager.currentLvl = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(SceneNames.GAME_MANAGER);
+        }
+    }
     public void GoToNextLevel()
     {
         try
@@ -26,6 +35,7 @@ public class Level_Transition : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GoToNextLevel();
+        if(TouchToChangeLevel)
+            GoToNextLevel();
     }
 }
