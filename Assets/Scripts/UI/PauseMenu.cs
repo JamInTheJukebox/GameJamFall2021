@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -74,6 +75,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseEnabled = newState;
     }
+    
     public void QuitToMenu()
     {
         pauseState = 0;
@@ -82,6 +84,13 @@ public class PauseMenu : MonoBehaviour
         GameManager.instance.ChangeScene(SceneNames.MAIN_MENU);         // change to level select in the future.
     }
 
+    public void RestartLevel()
+    {
+        string SceneName = SceneManager.GetActiveScene().name;
+        pauseState = 0;
+        enablePausing(false);
+        GameManager.instance.ChangeScene(SceneName);         // change to level select in the future.
+    }
     public bool isPaused()
     {
         return pauseState == 1;
