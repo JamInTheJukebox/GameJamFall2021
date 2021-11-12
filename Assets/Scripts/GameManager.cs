@@ -61,9 +61,13 @@ public class GameManager : MonoBehaviour
     IEnumerator loadLevelAsynchronously(string newScene)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(newScene, LoadSceneMode.Additive);
+        
         if (currentScene != "")
         {
-            SceneManager.UnloadSceneAsync(currentScene);
+            if(newScene == currentScene)
+                SceneManager.UnloadScene(currentScene);
+            else
+                SceneManager.UnloadSceneAsync(currentScene);
         }
         loadingAnimation.Play(loadFadeIn);
         currentScene = newScene;

@@ -88,6 +88,7 @@ public class PauseMenu : MonoBehaviour
     {
         string SceneName = SceneManager.GetActiveScene().name;
         pauseState = 0;
+        Time.timeScale = 1;
         enablePausing(false);
         GameManager.instance.ChangeScene(SceneName);         // change to level select in the future.
     }
