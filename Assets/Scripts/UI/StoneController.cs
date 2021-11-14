@@ -48,7 +48,10 @@ public class StoneController : MonoBehaviour
                     m_currentIndex = 0;
                 else if (m_currentIndex < 0)
                     m_currentIndex = Stones.Count - 1;
-                currentStone = Stones[m_currentIndex];
+                if (Stones.Count > 0)
+                    currentStone = Stones[m_currentIndex];
+                else
+                    currentStone = null;
             }
         }
     }
