@@ -11,19 +11,20 @@ public class MoonStone : StoneBehavior
     private float OldIntensity;
     private bool stateChanged;
 
-    private void Awake()
+    public override void StoneInit()        // awake function
     {
-        InitializeAnimator();
+        base.StoneInit();
         OldIntensity = MoonLight.intensity;
     }
 
-    public override float UseStone()
+    public override void UseStone()
     {
+        base.UseStone();
+        gameObject.SetActive(true);
         if (stateChanged)
             MoonLight.intensity = OldIntensity;     // handle any changes here to sprites
         else
             MoonLight.intensity = NewIntensity;
         stateChanged = !stateChanged;
-        return base.UseStone();         // return the cooldown time;
     }
 }

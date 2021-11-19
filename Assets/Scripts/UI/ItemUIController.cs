@@ -150,6 +150,8 @@ public class ItemUIController : MonoBehaviour
     public void ToggleItem()            // equip and unequip an item.
     {
         if(equippedItem == null) { return; }
+        if (MasterUserInterface.instance.StoneController.isUsingStone)
+            MasterUserInterface.instance.StoneController.DisableStone();
         usingItem = !usingItem;
         // add timer right here
     }

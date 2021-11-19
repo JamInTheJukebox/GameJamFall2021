@@ -31,8 +31,8 @@ public class AnimationTags
 public class Tags
 {
     public const string PLAYER = "Player";
-
-
+    public const string TNT = "TNT";
+    public const string SUNSTONE = "SunStoneCollider";
 }
 public class SceneNames
 {

@@ -6,27 +6,52 @@ using UnityEngine.Experimental.Rendering.Universal; //2019 VERSIONS
 public class SunStone : StoneBehavior
 {
     public Light2D SunStoneLight;
-
-    public float NewIntensity;
-    private float OldIntensity;
-    private bool stateChanged;
-
+    public GameObject BurningParticle;
+    private ParticleSystem burningParticle;
+    public GameObject SunStoneColliderPrefab;
+    private GameObject SunStoneCollider;
     private void Awake()
     {
-        InitializeAnimator();
-
+        burningParticle = Instantiate(BurningParticle).GetComponent<ParticleSystem>();
+        burningParticle.Stop();
+        SunStoneCollider = Instantiate(SunStoneColliderPrefab, burningParticle.transform);
     }
 
-    public override float UseStone()
+    public override void StoneInit()        // awake function
     {
-        return base.UseStone();         // return the cooldown time;
+        base.StoneInit();
+    }
+
+    public override void UseStone()
+    {
+        StoneActive = !StoneActive;
+
+        base.UseStone();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetMouseButtonUp(0))
         {
-            UseStone();
+            burningParticle.Stop();
+            SunStoneCollider.SetActive(false);
         }
     }
+
+    public override void ClickingBehavior()
+    {
+        print("BURNING!!");
+        // accept a collision
+        // run a function in the collion(UNtil its event is complete);
+        // if you collide with something, play this sound.
+        SunStoneCollider.SetActive(true);
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        burningParticle.transform.position = mousePos;
+        burningParticle.Play();
+    }
+}
+public enum StoneType
+{
+    SunStone = 0,
+    MoonStone = 1,
 }
