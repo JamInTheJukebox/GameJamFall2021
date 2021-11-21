@@ -197,6 +197,7 @@ public class ItemUIController : MonoBehaviour
     private void UpdateCounter()
     {
         TextDisplayParent.SetActive(equippedItem.itemUses != 0);
+        print(equippedItem.itemUses.ToString());
         TextDisplay.text = equippedItem.itemUses.ToString();
     }
 

@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: WaterBucket
   m_EditorClassIdentifier: 
   itemType: 2
-  itemAvalible: 0
+  itemAvailable: 1
+  requiresInteractable: 1
   itemSprite: {fileID: 21300000, guid: 78397f7557cb2364ba05d82596c5f6e9, type: 3}
   cursorImage: {fileID: 2800000, guid: 78397f7557cb2364ba05d82596c5f6e9, type: 3}
   itemUses: 0
+  useCounter: 0
   FullWaterBucketCursor: {fileID: 2800000, guid: a57469c48d87401408c2ac6ac6a32104, type: 3}
   FullWaterBucketSprite: {fileID: 21300000, guid: 78397f7557cb2364ba05d82596c5f6e9, type: 3}
   EmptyWaterBucketCursor: {fileID: 2800000, guid: 55afc0e344c327c41a549010523aaf3d, type: 3}

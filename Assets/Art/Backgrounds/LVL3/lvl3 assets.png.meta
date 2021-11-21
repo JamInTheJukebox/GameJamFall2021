@@ -1,0 +1,684 @@
+fileFormatVersion: 2
+guid: 0c1e86d857b08124795b0a8ef2d692ea
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5024177000993851153
+    second: lvl3 assets_0
+  - first:
+      213: 9053191214732461734
+    second: lvl3 assets_1
+  - first:
+      213: 3896871598062505891
+    second: lvl3 assets_2
+  - first:
+      213: -1982620413720291495
+    second: lvl3 assets_3
+  - first:
+      213: 8887343368950641097
+    second: lvl3 assets_4
+  - first:
+      213: -5528575722117649887
+    second: lvl3 assets_5
+  - first:
+      213: -6826296180763968529
+    second: lvl3 assets_6
+  - first:
+      213: 7266393562485509981
+    second: lvl3 assets_7
+  - first:
+      213: 4631598870349407342
+    second: lvl3 assets_8
+  - first:
+      213: -915758898109597214
+    second: lvl3 assets_9
+  - first:
+      213: -7483841754660854991
+    second: lvl3 assets_10
+  - first:
+      213: -5226535052307452670
+    second: lvl3 assets_11
+  - first:
+      213: -4234124247458943511
+    second: lvl3 assets_12
+  - first:
+      213: -5050261655266675048
+    second: lvl3 assets_13
+  - first:
+      213: -2933121024434882216
+    second: lvl3 assets_14
+  - first:
+      213: 5936636080294391808
+    second: lvl3 assets_15
+  - first:
+      213: 5308316923304219357
+    second: lvl3 assets_16
+  - first:
+      213: 6264274200754715126
+    second: lvl3 assets_17
+  - first:
+      213: 5241153101002032225
+    second: lvl3 assets_18
+  - first:
+      213: -7844026074706780525
+    second: lvl3 assets_19
+  - first:
+      213: 2588321116651707118
+    second: lvl3 assets_20
+  - first:
+      213: 1039971290561133328
+    second: lvl3 assets_21
+  - first:
+      213: -5353167526830767345
+    second: lvl3 assets_22
+  - first:
+      213: 1465253749755408368
+    second: lvl3 assets_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lvl3 assets_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1912
+        width: 392
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8f21703a9864ab0800000000000000
+      internalID: -5024177000993851153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_1
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1904
+        width: 408
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6c0d5a17563ad70800000000000000
+      internalID: 9053191214732461734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_2
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 1905
+        width: 391
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af03d96218741630800000000000000
+      internalID: 3896871598062505891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1568
+        width: 483
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95793c3fc315c74e0800000000000000
+      internalID: -1982620413720291495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1560
+        width: 496
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1f937f4bf265b70800000000000000
+      internalID: 8887343368950641097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_5
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 1568
+        width: 486
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a24512cad8643b0800000000000000
+      internalID: -5528575722117649887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_6
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb35f57acf1441a0800000000000000
+      internalID: -6826296180763968529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_7
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 1280
+        width: 144
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f4222327a67d460800000000000000
+      internalID: 7266393562485509981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_8
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 1280
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64e64122aeb64040800000000000000
+      internalID: 4631598870349407342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_9
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1276
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9364252229a43f0800000000000000
+      internalID: -915758898109597214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_10
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 1272
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1332432439d042890800000000000000
+      internalID: -7483841754660854991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_11
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 981
+        width: 160
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d2611bf0e9777b0800000000000000
+      internalID: -5226535052307452670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_12
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 969
+        width: 161
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed67572e6e5d35c0800000000000000
+      internalID: -4234124247458943511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_13
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 985
+        width: 164
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896bd0f28cdd9e9b0800000000000000
+      internalID: -5050261655266675048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 977
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8593457f7f57b47d0800000000000000
+      internalID: -2933121024434882216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_15
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 664
+        width: 288
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000f6b6bf0b236250800000000000000
+      internalID: 5936636080294391808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_16
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 672
+        width: 283
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd21eb8fd1eeaa940800000000000000
+      internalID: 5308316923304219357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_17
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 672
+        width: 283
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9f0af223c2fe650800000000000000
+      internalID: 6264274200754715126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_18
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 368
+        width: 223
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164c9aef9f05cb840800000000000000
+      internalID: 5241153101002032225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_19
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 368
+        width: 224
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e533038db642390800000000000000
+      internalID: -7844026074706780525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_20
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 368
+        width: 224
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeadaa297509be320800000000000000
+      internalID: 2588321116651707118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_21
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 56
+        width: 224
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b3086f068be6e00800000000000000
+      internalID: 1039971290561133328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_22
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 56
+        width: 224
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0388142f7ab5b5b0800000000000000
+      internalID: -5353167526830767345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl3 assets_23
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 56
+        width: 223
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ffeafba580a55410800000000000000
+      internalID: 1465253749755408368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
