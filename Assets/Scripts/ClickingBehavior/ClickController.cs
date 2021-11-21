@@ -11,7 +11,11 @@ public class ClickController : MonoBehaviour
     void Update() {
 
         if (PreventClicking()) { return; }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0) && MasterUserInterface.instance.StoneController.isUsingStone)
+        {
+            MasterUserInterface.instance.StoneController.useStone();
+        }
+        else if (Input.GetMouseButtonDown(0))
         {
             InteractWithObject(); 
         }
@@ -39,7 +43,6 @@ public class ClickController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, InteractableLayer);
 
         var itemController = MasterUserInterface.instance.ItemUIController;
-
         if (itemController.IsUsingItem())
         {
             if(!itemController.equippedItem.requiresInteractable)

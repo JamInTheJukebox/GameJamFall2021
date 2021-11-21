@@ -12,12 +12,13 @@ public class MasterUserInterface : MonoBehaviour
     [SerializeField] Timer timerController;
     [SerializeField] PauseMenu pauseMenu;
     [SerializeField] DialogueTyper dialogueTyper;
-
+    [SerializeField] StoneController stoneController;
     public TimelineController TimelineController { get => timelineController; set => timelineController = value; }
     public ItemUIController ItemUIController { get => itemUIController; set => itemUIController = value; }
     public Timer TimerController { get => timerController; set => timerController = value; }
     public PauseMenu PauseMenu { get => pauseMenu; set => pauseMenu = value; }
     public DialogueTyper DialogueTyper { get => dialogueTyper; set => dialogueTyper = value; }
+    public StoneController StoneController { get => stoneController; set => stoneController = value; }
 
     private void Awake()
     {

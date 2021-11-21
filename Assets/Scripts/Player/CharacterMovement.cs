@@ -56,4 +56,8 @@ public class CharacterMovement : MonoBehaviour
         if (!canMovePlayer)
             rb.velocity = new Vector2(0,rb.velocity.y);
     }
+    private void OnDisable()
+    {
+        MasterUserInterface.instance.TimelineController.TimelineChangeListener -= ToggleMovement;
+    }
 }
