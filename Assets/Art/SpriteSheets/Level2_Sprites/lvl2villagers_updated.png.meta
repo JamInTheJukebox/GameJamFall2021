@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: ee70247e33ba4c6429bad94a4e9478c6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7404386701229436041
+    second: lvl2villagers_updated_0
+  - first:
+      213: -4238981047019893834
+    second: lvl2villagers_updated_1
+  - first:
+      213: -2701258815140134057
+    second: lvl2villagers_updated_2
+  - first:
+      213: 4461416002078758064
+    second: lvl2villagers_updated_3
+  - first:
+      213: 802426352607957170
+    second: lvl2villagers_updated_4
+  - first:
+      213: -2686143815304261593
+    second: lvl2villagers_updated_16
+  - first:
+      213: 5866331865096969668
+    second: lvl2villagers_updated_18
+  - first:
+      213: -2982310217485467741
+    second: lvl2villagers_updated_20
+  - first:
+      213: 5877866404859483440
+    second: lvl2villagers_updated_21
+  - first:
+      213: -1179910880956301330
+    second: lvl2villagers_updated_22
+  - first:
+      213: 2155123547171431881
+    second: lvl2villagers_updated_36
+  - first:
+      213: -4321396980089597171
+    second: lvl2villagers_updated_37
+  - first:
+      213: 4851876776241345897
+    second: lvl2villagers_updated_38
+  - first:
+      213: -5196888821748401568
+    second: lvl2villagers_updated_39
+  - first:
+      213: 7452679526662486175
+    second: lvl2villagers_updated_40
+  - first:
+      213: 7136352806544707523
+    second: lvl2villagers_updated_41
+  - first:
+      213: 800446882244564845
+    second: lvl2villagers_updated_42
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lvl2villagers_updated_0
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 3649
+        width: 351
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773d79d76855e3990800000000000000
+      internalID: -7404386701229436041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_1
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 3643
+        width: 306
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb04c2623d1c25c0800000000000000
+      internalID: -4238981047019893834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_2
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 3695
+        width: 302
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7530e256b63338ad0800000000000000
+      internalID: -2701258815140134057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_3
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 3665
+        width: 314
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4d52f57322aed30800000000000000
+      internalID: 4461416002078758064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_4
+      rect:
+        serializedVersion: 2
+        x: 3517
+        y: 3684
+        width: 416
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b01c99248ac22b00800000000000000
+      internalID: 802426352607957170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_16
+      rect:
+        serializedVersion: 2
+        x: 3467
+        y: 3129
+        width: 330
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7205d298e66e8bad0800000000000000
+      internalID: -2686143815304261593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_18
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 3113
+        width: 422
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cdd8a900c5696150800000000000000
+      internalID: 5866331865096969668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_20
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 3071
+        width: 322
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3afb2cc78a4bc96d0800000000000000
+      internalID: -2982310217485467741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_21
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 3143
+        width: 496
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0351ada5a50629150800000000000000
+      internalID: 5877866404859483440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_22
+      rect:
+        serializedVersion: 2
+        x: 2713
+        y: 3149
+        width: 398
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef3bf12e4d10afe0800000000000000
+      internalID: -1179910880956301330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_36
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 2485
+        width: 478
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5ab34a27988ed10800000000000000
+      internalID: 2155123547171431881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_37
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 2417
+        width: 498
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d035054a7505704c0800000000000000
+      internalID: -4321396980089597171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_38
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 2449
+        width: 478
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96535ddb834555340800000000000000
+      internalID: 4851876776241345897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_39
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1731
+        width: 311
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06afc72a621f0e7b0800000000000000
+      internalID: -5196888821748401568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_40
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1183
+        width: 504
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f983b832b8c3d6760800000000000000
+      internalID: 7452679526662486175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_41
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1126
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf85f9411b690360800000000000000
+      internalID: 7136352806544707523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lvl2villagers_updated_42
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1056
+        width: 44
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6791cdc232cb1b00800000000000000
+      internalID: 800446882244564845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
