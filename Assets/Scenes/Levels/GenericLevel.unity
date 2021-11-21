@@ -259,6 +259,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 251991202, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+      propertyPath: MoonLight
+      value: 
+      objectReference: {fileID: 279772838}
     - target: {fileID: 1789472270374849521, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
       propertyPath: m_Name
       value: Player

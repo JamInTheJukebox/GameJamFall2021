@@ -16,11 +16,8 @@ public class SeedResponse : GenericEvent
 
     public override bool Interact(Vector2 targetPos, Items selectedItem)        // did we successfully interact with the item?
     {
-        print("Can interact???");
-        print(selectedItem);
         if (base.Interact(targetPos) && (RequiredItemToInteract == selectedItem || selectedItem == Items.waterCan))
         {
-            print("yes, yes I can");
             return true; // failed to get the item
         }
 
@@ -63,6 +60,9 @@ public class SeedResponse : GenericEvent
     public void ChangeState()       // make this timeline dependent
     {
         if(watered && planted)
+        {
+            base.executeInteractable();
             Plant.SetActive(true);
+        }
     }
 }
