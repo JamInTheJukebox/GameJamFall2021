@@ -10,10 +10,13 @@ public class DisplacePlayerEvent : GenericEvent
 
     public override bool Interact(Vector2 targetPos)        // did we successfully interact with the item?
     {
-        if (base.Interact(targetPos) && player != null)
+        print("lol3");
+
+        if (player != null)
         {
             return true; // failed to get the item
         }
+        print("lol2");
 
         // failed to get the item   
         return false;
@@ -21,6 +24,7 @@ public class DisplacePlayerEvent : GenericEvent
 
     public override void executeInteractable()
     {
+        print("lol");
         onInteract.Invoke();
         if(Vector2.Distance(player.position,pointA.position) < Vector2.Distance(player.position, pointB.position))
         {
@@ -32,15 +36,15 @@ public class DisplacePlayerEvent : GenericEvent
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == Tags.PLAYER)
+        if (collision.gameObject.tag == Tags.PLAYER)
         {
             player = collision.transform;
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == Tags.PLAYER)
         {
