@@ -28,7 +28,8 @@ public class ScreenShakeController : MonoBehaviour
 
     private void Update()
     {
-        transform.position = TargetPosition;
+        if(ShakeTimeRemaining > 0)
+            transform.position = TargetPosition;
         /*Testing
         if (Input.GetKeyDown(KeyCode.A)) 
             ShakeScreen(0.2f, 0.3f);
