@@ -431,7 +431,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   RequiredItemToInteract: 1
-  Plant: {fileID: 1762555687}
+  Plant: {fileID: 1671924638}
   PlantParent: {fileID: 1762555688}
   needsWater: 0
 --- !u!61 &171465940
@@ -913,7 +913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646032579797689443, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646032579922106919, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
       propertyPath: orthographic size
@@ -3708,7 +3708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1671924639
 Transform:
   m_ObjectHideFlags: 0
@@ -3822,7 +3822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1762555688
 Transform:
   m_ObjectHideFlags: 0
@@ -5583,7 +5583,7 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls: []
-  RequiredItemToInteract: 100
+  RequiredItemToInteract: 1
   Plant: {fileID: 68777305}
   PlantParent: {fileID: 1376125897}
   needsWater: 0
