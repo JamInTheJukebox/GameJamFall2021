@@ -5,10 +5,11 @@ using UnityEngine;
 public class SeedResponse : GenericEvent
 {
     public GameObject Plant;
+    public Transform PlantParent;
+
     bool planted;
     [SerializeField] bool needsWater = true;
     bool watered;
-
     private void Awake()
     {
         watered = !needsWater;
@@ -62,7 +63,16 @@ public class SeedResponse : GenericEvent
         if(watered && planted)
         {
             base.executeInteractable();
-            Plant.SetActive(true);
+            if(Plant != null && !Plant.activeSelf)
+            {
+                bool activatePlant = true;
+                foreach(Transform plant in PlantParent)
+                {
+                    activatePlant = activatePlant && !plant.gameObject.activeSelf;
+                }
+                print(activatePlant);
+                Plant.SetActive(activatePlant);
+            }
         }
     }
 }
