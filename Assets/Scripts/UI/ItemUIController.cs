@@ -86,13 +86,21 @@ public class ItemUIController : MonoBehaviour
 
     public void CollectItem(ItemScriptable newItem)
     {
-        if(!inventoryItems.Any(x => x.itemType == newItem.itemType))     // we do not want the same item in the inventory!
+        ItemScriptable item = inventoryItems.SingleOrDefault(x => x.itemType == newItem.itemType);
+        if(!item)     // we do not want the same item in the inventory!
         {
             var itemToAdd = createItemInstance(newItem);
             inventoryItems.Add(itemToAdd);
             equippedItem = itemToAdd;
             inventoryIndex = inventoryItems.Count - 1;
             usingItem = false;
+        }
+        else if(item && item.useCounter)
+        {
+            item.itemUses += newItem.itemUses;
+            UpdateCounter();
+            // increment the item if it is a counter.
+            
         }
     }
 

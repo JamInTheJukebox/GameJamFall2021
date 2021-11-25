@@ -4,6 +4,8 @@ using System.Collections;
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
+    public bool TargetOnStartup = true;            // set the camera to look at the player on startup.
+    public bool MoveY = true;
     public bool isFollowing = true;
     private float zPosition;
     private Vector3 velocity = Vector3.zero;
@@ -17,7 +19,7 @@ public class CameraFollow : MonoBehaviour
         zPosition = transform.position.z;
         target = FindObjectOfType<CharacterMovement>().transform;
       
-        if (target)
+        if (target && TargetOnStartup)
             transform.position = new Vector3(target.position.x, target.position.y, zPosition);
     }
 
@@ -30,7 +32,7 @@ public class CameraFollow : MonoBehaviour
         var temp = target.transform.position;
         if (isFollowing)
         {
-            temp = new Vector3(temp.x, temp.y, transform.position.z);
+            temp = new Vector3(temp.x, (MoveY ) ? temp.y : transform.position.y, transform.position.z);
             if(ScreenBounded)
                 temp.x = Mathf.Clamp(temp.x, BoundsX.x, BoundsX.y);
             //temp.y = Mathf.Clamp(temp.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight);

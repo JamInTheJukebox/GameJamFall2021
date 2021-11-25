@@ -75,4 +75,16 @@ public class SeedResponse : GenericEvent
             }
         }
     }
+
+    public void TurnAllOffExcept(GameObject root)
+    {
+        foreach(Transform plant_ in PlantParent)
+        {
+            GameObject plant = plant_.gameObject;
+            if (plant != root)
+                plant.SetActive(false);         // turn off all gameobjects except for the one we enter in this function        
+            else
+                plant.SetActive(true);
+        }
+    }
 }
