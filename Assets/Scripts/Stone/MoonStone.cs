@@ -14,11 +14,15 @@ public class MoonStone : StoneBehavior
     public override void StoneInit()        // awake function
     {
         base.StoneInit();
-        OldIntensity = MoonLight.intensity;
+        if (MoonLight != null)
+            OldIntensity = MoonLight.intensity;
+        else
+            Debug.LogWarning("MoonStone.cs: MOonlight entity Missing.");
     }
 
     public override void UseStone()
     {
+        if(MoonLight == null) { return; }
         base.UseStone();
         gameObject.SetActive(true);
         if (stateChanged)

@@ -20,6 +20,8 @@ public class CharacterAnimation : MonoBehaviour
         }
     }
     Rigidbody2D rb;
+    bool running;
+
     public float runMarginOfError = 0.001f;
     private Animator charAnimator;
     private TimelineController timeline;
@@ -57,7 +59,7 @@ public class CharacterAnimation : MonoBehaviour
             tempVari = AnimationTags.PLAYER_WAND;
         }
         // If Running
-        else if (Mathf.Abs(rb.velocity.x) > runMarginOfError)
+        else if (running)
         {
             tempVari = AnimationTags.PLAYER_RUN;
         }
@@ -73,6 +75,11 @@ public class CharacterAnimation : MonoBehaviour
     {
         sfxSordingOrderScript.SetSortingLayer("TimelineTransition");
         sortorder.SetSortingLayer("TimelineTransition");
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        running = Mathf.Abs(rb.velocity.x) > runMarginOfError;
     }
 }
     // add method to call change sorting order on both the player and the sfx

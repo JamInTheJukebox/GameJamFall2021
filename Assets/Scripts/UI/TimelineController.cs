@@ -32,7 +32,6 @@ public class TimelineController : MonoBehaviour
 
     [SerializeField] Button[] TimelineButtons = new Button[3];
     private Dictionary<Timeline, Button> TimelineDictionary = new Dictionary<Timeline,Button>();
-    private float TestTimer = 4;
     [SerializeField] Color buttonDisabledColor;
     [Header("Clock Image")]
     [SerializeField] Image ClockPNG;
