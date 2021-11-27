@@ -78,6 +78,12 @@ public class ItemUIController : MonoBehaviour
 
     public delegate void interactEvent();
 
+    private void Awake()
+    {
+        if (inventoryItems.Count != 0)
+            equippedItem = inventoryItems[0];
+    }
+
     private void OnEnable()
     {
         if (equippedItem == null)
@@ -215,6 +221,7 @@ public class ItemUIController : MonoBehaviour
         {
             if (equippedItem.cursorImage != null)
             {
+                print("Uh");
                 Cursor.SetCursor(equippedItem.cursorImage, Vector2.zero, CursorMode.Auto);
             }
             else

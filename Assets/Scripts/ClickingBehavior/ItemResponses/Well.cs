@@ -5,7 +5,7 @@ using UnityEngine;
 public class Well : GenericEvent
 {
     public GameObject Water;
-
+    public bool InfiniteWaterSource = false;    
     public override bool Interact(Vector2 targetPos, Items selectedItem)        // did we successfully interact with the item?
     {
         if (base.Interact(targetPos) && RequiredItemToInteract == selectedItem)
@@ -25,6 +25,8 @@ public class Well : GenericEvent
     {
         Waterbucket bucket = item as Waterbucket;
         if(bucket == null) { return 0; }
+        if (InfiniteWaterSource)
+            return 0;    
         ChangeFilledState(bucket.isFilled());
         int newState = ChangeFilledState(bucket.isFilled()) ? 1 : 0;
         return newState;

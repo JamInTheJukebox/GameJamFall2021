@@ -38,4 +38,14 @@ public class GenericEvent : Interactable
         onInteract.Invoke();
         return 0;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!TouchToInteract) { return; }
+
+        if (collision.gameObject.tag == Tags.PLAYER)
+        {
+            executeInteractable();
+        }
+    }
 }

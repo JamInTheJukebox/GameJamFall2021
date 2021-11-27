@@ -36,6 +36,7 @@ public class DialoguePrompt : Interactable
     public override void executeInteractable()
     {
         onSendText?.Invoke(conversation, null);
+        onInteract?.Invoke();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

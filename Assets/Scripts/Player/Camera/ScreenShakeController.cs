@@ -70,4 +70,9 @@ public class ScreenShakeController : MonoBehaviour
         ShakeFadeTime = Power / shakeDuration;
         ShakeRotation = Power * rotationMultiplier;
     }
+
+    public void DefaultScreenShake()
+    {
+        ShakeScreen(0.34f, 0.24f);
+    }
 }

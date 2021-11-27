@@ -59,7 +59,7 @@ public class ClickController : MonoBehaviour
             if (!obj) { return; }
             if (!itemController.IsUsingItem())                       // pick up objects, interact with dialogue prompts.
             {
-                if ((bool)obj?.Interact(mousePos2D))
+                if ((bool)obj?.Interact(transform.position))
                 {
                     obj.executeInteractable();
                     Debug.Log("successful interaction!");
@@ -68,7 +68,7 @@ public class ClickController : MonoBehaviour
             else
             {
                 // if we have an item, lend control of what happens to the ItemUIController.
-                if ((bool)obj?.Interact(mousePos2D, itemController.GetItemTypeInUse()))
+                if ((bool)obj?.Interact(transform.position, itemController.GetItemTypeInUse()))
                 {
                     itemController.UseItem(obj);
                     Debug.Log("successful item interaction!");

@@ -1,0 +1,420 @@
+fileFormatVersion: 2
+guid: 1e62637d39c40654ea2cd97e80424daf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5226969369396071104
+    second: wandsheetpastfilledtwo (1)_0
+  - first:
+      213: 1707556066122740200
+    second: wandsheetpastfilledtwo (1)_1
+  - first:
+      213: 9035034854515486961
+    second: wandsheetpastfilledtwo (1)_2
+  - first:
+      213: 1842035833336058708
+    second: wandsheetpastfilledtwo (1)_3
+  - first:
+      213: -4971325834358675716
+    second: wandsheetpastfilledtwo (1)_4
+  - first:
+      213: -6119626815059177247
+    second: wandsheetpastfilledtwo (1)_5
+  - first:
+      213: -4405233032423880408
+    second: wandsheetpastfilledtwo (1)_8
+  - first:
+      213: -2901965709901060232
+    second: wandsheetpastfilledtwo (1)_9
+  - first:
+      213: 110136504971046048
+    second: wandsheetpastfilledtwo (1)_10
+  - first:
+      213: 2908260896743952171
+    second: wandsheetpastfilledtwo (1)_13
+  - first:
+      213: 2620297029868793459
+    second: wandsheetpastfilledtwo (1)_15
+  - first:
+      213: 2321349649626384743
+    second: wandsheetpastfilledtwo (1)_25
+  - first:
+      213: -2720852889901799302
+    second: wandsheetpastfilledtwo (1)_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wandsheetpastfilledtwo (1)_0
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 2911
+        width: 609
+        height: 1022
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045bc4d5d031677b0800000000000000
+      internalID: -5226969369396071104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandsheetpastfilledtwo (1)_1
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 2931
+        width: 560
+        height: 942
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e13f43f13572b710800000000000000
+      internalID: 1707556066122740200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandsheetpastfilledtwo (1)_2
+      rect:
+        serializedVersion: 2
+        x: 2403
+        y: 3870
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f03bac9454e26d70800000000000000
+      internalID: 9035034854515486961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandsheetpastfilledtwo (1)_3
+      rect:
+        serializedVersion: 2
+        x: 3181
+        y: 2939
+        width: 472
+        height: 1000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4535985b4d9309910800000000000000
+      internalID: 1842035833336058708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandsheetpastfilledtwo (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 3378
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6245c2e7d420bb0800000000000000
+      internalID: -4971325834358675716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandsheetpastfilledtwo (1)_5
+      rect:
+        serializedVersion: 2
+        x: 2201
+        y: 2933
+        width: 560
+        height: 929
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0517ab5d7b21ba0800000000000000
+      internalID: -6119626815059177247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandsheetpastfilledtwo (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 2721
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 829ce8d95e77dd2c0800000000000000
+      internalID: -4405233032423880408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandsheetpastfilledtwo (1)_9
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1567
+        width: 589
+        height: 1106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 877abf6ef852ab7d0800000000000000
+      internalID: -2901965709901060232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandsheetpastfilledtwo (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 1569
+        width: 518
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac2a975198478100800000000000000
+      internalID: 110136504971046048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandsheetpastfilledtwo (1)_13
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 1579
+        width: 541
+        height: 1052
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f059080e73c5820800000000000000
+      internalID: 2908260896743952171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandsheetpastfilledtwo (1)_15
+      rect:
+        serializedVersion: 2
+        x: 3279
+        y: 1583
+        width: 476
+        height: 1100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e2757044a2d5420800000000000000
+      internalID: 2620297029868793459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandsheetpastfilledtwo (1)_25
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 289
+        width: 723
+        height: 1068
+      alignment: 9
+      pivot: {x: 0.33, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76945711537173020800000000000000
+      internalID: 2321349649626384743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wandsheetpastfilledtwo (1)_26
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 273
+        width: 758
+        height: 1068
+      alignment: 9
+      pivot: {x: 0.32, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78ee4b56b69d3ad0800000000000000
+      internalID: -2720852889901799302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

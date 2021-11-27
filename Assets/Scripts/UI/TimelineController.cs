@@ -141,7 +141,7 @@ public class TimelineController : MonoBehaviour
 
     public void CanChangeTimelinesAgain()
     {
-        EnableInteractableButtons();
+        EnableInteractableButtons();        // we can add a delay to this.
         StartCoroutine(ClockFadeColor(Color.white, 20f));
         isChangingTime = false;
         TimelineChangeListener.Invoke(true);                             // timeline transition complete!

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Level_Transition : MonoBehaviour
 {
+    public bool CanTransitionLevel = true;          // require level transitions.
     public bool TouchToChangeLevel;
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class Level_Transition : MonoBehaviour
     }
     public void GoToNextLevel()
     {
+        if (!CanTransitionLevel) { return; }        // add a dialogue box here.
         try
         {
             int i;
@@ -37,5 +39,20 @@ public class Level_Transition : MonoBehaviour
     {
         if(TouchToChangeLevel)
             GoToNextLevel();
+    }
+
+    public void WinConditionComplete()
+    {
+        CanTransitionLevel = true;
+    }
+
+    public void Die()
+    {
+        // play effect here then restart the level
+        Invoke("restartLVL",0.1f);
+    }
+
+    public void restartLVL() {
+        MasterUserInterface.instance.PauseMenu.RestartLevel();
     }
 }

@@ -51,6 +51,10 @@ public class CharacterMovement : MonoBehaviour
 
     public void ToggleMovement(bool newState)
     {
+        if (newState)
+        {
+            mySpriteRenderer.sortingLayerName = "Player";
+        }
         canMovePlayer = newState;
         //mySpriteRenderer.sortingLayerName = "TimeLineTransition";
         if (!canMovePlayer)

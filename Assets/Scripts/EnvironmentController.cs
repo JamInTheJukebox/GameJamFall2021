@@ -60,7 +60,6 @@ public class EnvironmentController : MonoBehaviour
             t += Time.deltaTime/overlayFadeDuration;
             environmentOverlay.color = new Color(overlayColor.r, overlayColor.g, overlayColor.b, Mathf.Lerp(currentAlpha, endAlpha, t));
             yield return new WaitForEndOfFrame();
-            print("KeepGoing" + environmentOverlay.color.a);
         }
         if (endAlpha == 1)
         {
@@ -69,7 +68,6 @@ public class EnvironmentController : MonoBehaviour
         else if(endAlpha == 0)
         {
             timelineController.CanChangeTimelinesAgain();
-            print("What the what");
         }
     }
 }

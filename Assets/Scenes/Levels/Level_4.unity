@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -1317,7 +1317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -2246,7 +2246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -3424,7 +3424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6c76211b8705b41bb4af014471d3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -3781,7 +3781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -3898,7 +3898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -4365,7 +4365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6c76211b8705b41bb4af014471d3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -5013,7 +5013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b3cc4d46e3e1b43bb9224a3719c4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -5043,6 +5043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa30f82a2c5eeb4485d9d0d276d7783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanTransitionLevel: 1
   TouchToChangeLevel: 0
 --- !u!1 &611176990
 GameObject:
@@ -5286,7 +5287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -6691,7 +6692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6c76211b8705b41bb4af014471d3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -6828,7 +6829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6c76211b8705b41bb4af014471d3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -7067,7 +7068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -7409,7 +7410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6c76211b8705b41bb4af014471d3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -8704,7 +8705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -8976,7 +8977,7 @@ Transform:
   m_LocalScale: {x: 4.5825, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1020716016
 GameObject:
@@ -9475,7 +9476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -10259,7 +10260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b3cc4d46e3e1b43bb9224a3719c4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -10289,6 +10290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa30f82a2c5eeb4485d9d0d276d7783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanTransitionLevel: 1
   TouchToChangeLevel: 0
 --- !u!1 &1112787212
 GameObject:
@@ -10402,7 +10404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6c76211b8705b41bb4af014471d3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -13879,7 +13881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -15117,7 +15119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -15381,7 +15383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6c76211b8705b41bb4af014471d3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -16760,7 +16762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6c76211b8705b41bb4af014471d3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -16976,7 +16978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6c76211b8705b41bb4af014471d3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -18100,7 +18102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -18578,7 +18580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -19457,6 +19459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa30f82a2c5eeb4485d9d0d276d7783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanTransitionLevel: 1
   TouchToChangeLevel: 0
 --- !u!4 &2061939152
 Transform:
@@ -19484,7 +19487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b3cc4d46e3e1b43bb9224a3719c4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -20875,7 +20878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -21127,3 +21130,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c54c7bc24de0e4418db6f86b58bcfa3, type: 3}
+--- !u!1001 &7833252428099901129
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7833252428238100154, guid: 01bab4b7d349eb348a0f73f2200117ba, type: 3}
+      propertyPath: m_Name
+      value: ClimbeablePlantSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833252428238100157, guid: 01bab4b7d349eb348a0f73f2200117ba, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833252428238100157, guid: 01bab4b7d349eb348a0f73f2200117ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833252428238100157, guid: 01bab4b7d349eb348a0f73f2200117ba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -43.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833252428238100157, guid: 01bab4b7d349eb348a0f73f2200117ba, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833252428238100157, guid: 01bab4b7d349eb348a0f73f2200117ba, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833252428238100157, guid: 01bab4b7d349eb348a0f73f2200117ba, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833252428238100157, guid: 01bab4b7d349eb348a0f73f2200117ba, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833252428238100157, guid: 01bab4b7d349eb348a0f73f2200117ba, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833252428238100157, guid: 01bab4b7d349eb348a0f73f2200117ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833252428238100157, guid: 01bab4b7d349eb348a0f73f2200117ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7833252428238100157, guid: 01bab4b7d349eb348a0f73f2200117ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 01bab4b7d349eb348a0f73f2200117ba, type: 3}
