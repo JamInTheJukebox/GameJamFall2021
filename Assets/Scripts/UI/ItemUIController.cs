@@ -132,14 +132,14 @@ public class ItemUIController : MonoBehaviour
     public void UseItem()
     {
         equippedItem.UseItem();
-        if (!equippedItem.KeepItem())
+        if (equippedItem.ItemDepleted())
         {
             RemoveItem();
             return;
         }
 
-        UpdateCursor();
         UpdateCounter();
+        UpdateCursor();
         UpdateItemSprite();
         UpdateItemColors();
     }
@@ -149,14 +149,13 @@ public class ItemUIController : MonoBehaviour
         // do a check if we can use the item here.
         equippedItem.UseItem(ObjectToInteractWith);
         print("object to interact with " + ObjectToInteractWith);
-        if(!equippedItem.KeepItem())
+        if(equippedItem.ItemDepleted())
         {
             RemoveItem();
             return;
         }
-
-        UpdateCursor();
         UpdateCounter();
+        UpdateCursor();
         UpdateItemSprite();
         UpdateItemColors();
     }
@@ -221,7 +220,6 @@ public class ItemUIController : MonoBehaviour
         {
             if (equippedItem.cursorImage != null)
             {
-                print("Uh");
                 Cursor.SetCursor(equippedItem.cursorImage, Vector2.zero, CursorMode.Auto);
             }
             else

@@ -18,4 +18,4 @@ MonoBehaviour:
   itemSprite: {fileID: -5024177000993851153, guid: 0c1e86d857b08124795b0a8ef2d692ea, type: 3}
   cursorImage: {fileID: 2800000, guid: de1bde761f4f5fb429ba0da59ffb3849, type: 3}
   itemUses: 1
-  useCounter: 0
+  useCounter: 1

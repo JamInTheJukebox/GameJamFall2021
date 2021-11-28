@@ -427,13 +427,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
   RequiredItemToInteract: 1
   Plant: {fileID: 686487039}
+  PlantParent: {fileID: 0}
   needsWater: 1
 --- !u!61 &16337407
 BoxCollider2D:
@@ -1904,7 +1905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8e27f0111b07c40931b64c2d6ad57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -2224,7 +2225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LightType: 4
-  m_BlendStyleIndex: 0
+  m_BlendStyleIndex: 1
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
@@ -2632,7 +2633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8e27f0111b07c40931b64c2d6ad57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -3221,7 +3222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8e27f0111b07c40931b64c2d6ad57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -7825,13 +7826,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
   RequiredItemToInteract: 1
   Plant: {fileID: 0}
+  PlantParent: {fileID: 0}
   needsWater: 1
 --- !u!61 &1148805322
 BoxCollider2D:
@@ -8090,7 +8092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8e27f0111b07c40931b64c2d6ad57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -9573,7 +9575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f7dfeaefa3e7448aed98d3447c69cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -9592,6 +9594,7 @@ MonoBehaviour:
         m_CallState: 2
   RequiredItemToInteract: 2
   Water: {fileID: 1233028026}
+  InfiniteWaterSource: 0
 --- !u!61 &1429883754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10156,7 +10159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8e27f0111b07c40931b64c2d6ad57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -12448,7 +12451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f7dfeaefa3e7448aed98d3447c69cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -12467,6 +12470,7 @@ MonoBehaviour:
         m_CallState: 2
   RequiredItemToInteract: 2
   Water: {fileID: 224911237}
+  InfiniteWaterSource: 0
 --- !u!61 &1934025722
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13136,6 +13140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fa30f82a2c5eeb4485d9d0d276d7783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanTransitionLevel: 1
   TouchToChangeLevel: 0
 --- !u!1 &2027360661
 GameObject:
@@ -13208,7 +13213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8e27f0111b07c40931b64c2d6ad57f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -13649,13 +13654,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
       m_Calls: []
   RequiredItemToInteract: 1
   Plant: {fileID: 0}
+  PlantParent: {fileID: 0}
   needsWater: 1
 --- !u!61 &2051550313
 BoxCollider2D:
@@ -13746,7 +13752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6c76211b8705b41bb4af014471d3ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -14790,7 +14796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -14857,6 +14863,7 @@ MonoBehaviour:
         m_CallState: 2
   RequiredItemToInteract: 1
   Plant: {fileID: 5029313613160194597}
+  PlantParent: {fileID: 0}
   needsWater: 1
 --- !u!4 &5029313612785748275
 Transform:
@@ -15180,7 +15187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -15211,6 +15218,7 @@ MonoBehaviour:
         m_CallState: 2
   RequiredItemToInteract: 1
   Plant: {fileID: 0}
+  PlantParent: {fileID: 0}
   needsWater: 1
 --- !u!4 &5849526512836427082
 Transform:
@@ -15321,7 +15329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2e3843b35f46f4594700cda743a5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -15352,6 +15360,7 @@ MonoBehaviour:
         m_CallState: 2
   RequiredItemToInteract: 1
   Plant: {fileID: 5849526512836427092}
+  PlantParent: {fileID: 0}
   needsWater: 1
 --- !u!61 &5849526513267545676
 BoxCollider2D:
@@ -15528,7 +15537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6f7dfeaefa3e7448aed98d3447c69cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinimumSquareDistance: 400
+  MinimumDistance: 30
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
@@ -15547,6 +15556,7 @@ MonoBehaviour:
         m_CallState: 2
   RequiredItemToInteract: 2
   Water: {fileID: 8514337611527713650}
+  InfiniteWaterSource: 0
 --- !u!61 &8514337611342526883
 BoxCollider2D:
   m_ObjectHideFlags: 0

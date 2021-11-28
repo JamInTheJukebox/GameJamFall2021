@@ -40,9 +40,9 @@ public class ItemScriptable : ScriptableObject
         return true;
     }   // add custom cooldowns to items with counters.
 
-    public virtual bool KeepItem()       // conditions to destroy the item we are using.
+    public virtual bool ItemDepleted()       // conditions to destroy the item we are using.
     {
-        return itemUses > 0 || !useCounter;
+        return itemUses <= 0 && useCounter;
     }
     public void init(ItemScriptable SO)      // used for creating instances of objects
     {
