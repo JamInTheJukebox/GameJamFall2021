@@ -8,14 +8,6 @@ public class MainMenu : MonoBehaviour
     public AudioClip ButtonClickSFX;
     public AudioClip QuitButtonSFX;
 
-    private void Awake()
-    {
-        if(GameManager.instance == null)
-        {
-            SceneManager.LoadScene(SceneNames.GAME_MANAGER);
-        }
-    }
-
     public void PlayButtonSFX()
     {
         AudioManager.Instance.PlaySFX(ButtonClickSFX);

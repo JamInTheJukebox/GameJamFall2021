@@ -11,9 +11,9 @@ public class Level_Transition : MonoBehaviour
     {
         if(GameManager.instance == null)
         {
-            GameManager.StartInMainMenu = false;
-            GameManager.currentLvl = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(SceneNames.GAME_MANAGER);
+            //GameManager.StartInMainMenu = false;
+            //GameManager.currentLvl = SceneManager.GetActiveScene().name;
+            //SceneManager.LoadScene(SceneNames.GAME_MANAGER);
         }
     }
     public void GoToNextLevel()
@@ -22,7 +22,7 @@ public class Level_Transition : MonoBehaviour
         try
         {
             int i;
-            string SceneName = SceneManager.GetActiveScene().name;
+            string SceneName = GameManager.GetCurrentLevelName();
             SceneName = SceneName.Replace("Level_", "");
             i = int.Parse(SceneName);
             i++;

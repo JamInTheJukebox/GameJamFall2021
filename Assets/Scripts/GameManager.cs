@@ -21,13 +21,11 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
-    private string currentScene = "";
+    private static string currentScene = "";
     // loading bar
     [SerializeField] Slider loadingBar;
     [SerializeField] Animator loadingAnimation;
     int loadFadeIn; int loadFadeOut;
-    public static bool StartInMainMenu = true;
-    public static string currentLvl;
     private void Awake()
     {
         if(instance == null)
@@ -36,19 +34,16 @@ public class GameManager : MonoBehaviour
         }
         loadFadeIn = Animator.StringToHash(AnimationTags.LOAD_FADEIN);
         loadFadeOut = Animator.StringToHash(AnimationTags.LOAD_FADEOUT);
-        if (StartInMainMenu)
-        {
-            ChangeScene(SceneNames.MAIN_MENU);
-        }
-        else
-        {
-            ChangeScene(currentLvl);
-        }
+        ChangeScene(currentScene);
     }
 
     public void ChangeScene(string newScene)
     {
-        if(CheckSceneValidation(newScene) < 0) { Debug.LogError("GameManager.cs: Scene not found in build settings"); return; }
+        if(CheckSceneValidation(newScene) < 0) { Debug.LogError("GameManager.cs: Scene not found in build settings");
+            currentScene = "";
+            StartCoroutine(loadLevelAsynchronously(SceneNames.MAIN_MENU));
+            return;
+        }
         StartCoroutine(loadLevelAsynchronously(newScene));
     }
     private int CheckSceneValidation(string sceneName)
@@ -60,15 +55,19 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator loadLevelAsynchronously(string newScene)
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(newScene, LoadSceneMode.Additive);
-        
-        if (currentScene != "")
+        if (SceneManager.GetSceneByName(currentScene).isLoaded)
         {
-            if(newScene == currentScene)
-                SceneManager.UnloadScene(currentScene);
-            else
-                SceneManager.UnloadSceneAsync(currentScene);
+            AsyncOperation operation2 = SceneManager.UnloadSceneAsync(currentScene);
+            while (!operation2.isDone)
+            {
+                // unloading scene;
+                yield return null;
+            }
+            print("done unloading level");
         }
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync(newScene, LoadSceneMode.Additive);
+
         loadingAnimation.Play(loadFadeIn);
         currentScene = newScene;
 
@@ -82,8 +81,25 @@ public class GameManager : MonoBehaviour
         loadingAnimation.Play(loadFadeOut);
         loadingBar.gameObject.SetActive(false);
         loadingBar.value = 0;
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(newScene));
+    }
 
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+    static void OnAfterSceneLoadRuntimeMethod()
+    {
+        // if the active scene is not game manager on startup, load it and load the scene we were just on.
+        if(SceneManager.GetActiveScene().name != SceneNames.GAME_MANAGER)
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(SceneNames.GAME_MANAGER);
+            currentScene = scene.name;
+        }
+
+        Debug.Log("First Scene loaded!");
+    }
+
+    public static string GetCurrentLevelName()
+    {
+        return currentScene;
     }
 
 }
