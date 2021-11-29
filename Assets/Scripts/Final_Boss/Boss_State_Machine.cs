@@ -38,10 +38,10 @@ public class Boss_State_Machine : MonoBehaviour
                 {
                     case boss_state.MoveToDifferentSideOfScreen:
                         nextPositionString = (nextPositionString == "Left") ? "Right" : "Left";
-                        if (bossPositions.Contains(nextPositionString))
+                        /*if (bossPositions.Contains(nextPositionString))
                         {
                             nextBossPosition = bossPositions[nextPositionString];
-                        }
+                        }*/
                         break;
                 }
             }
@@ -92,7 +92,7 @@ public class Boss_State_Machine : MonoBehaviour
         BossAnimator = GetComponent<Animator>();
         foreach(BossPositions pos in bossPositions)
         {
-
+            
         }
     }
 
