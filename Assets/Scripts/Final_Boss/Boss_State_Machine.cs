@@ -22,7 +22,7 @@ public class Boss_State_Machine : MonoBehaviour
         {
             if(value != m_BossState)
             {
-                if(PreviousState == m_BossState)
+                if (PreviousState == m_BossState)
                 {
                     statesRepeated++;
                 }
@@ -33,18 +33,26 @@ public class Boss_State_Machine : MonoBehaviour
                 PreviousState = m_BossState;
                 m_BossState = value;
                 StateComplete = false;
+                StateChangeCallback();
 
-                switch (m_BossState)
-                {
-                    case boss_state.MoveToDifferentSideOfScreen:
-                        nextPositionString = (nextPositionString == "Left") ? "Right" : "Left";
-                        /*if (bossPositions.Contains(nextPositionString))
-                        {
-                            nextBossPosition = bossPositions[nextPositionString];
-                        }*/
-                        break;
-                }
+                timeElapsed = 0;
             }
+        }
+    }
+
+    private void StateChangeCallback()
+    {
+        switch (m_BossState)
+        {
+            case boss_state.idle:
+                break;
+            case boss_state.ShootOrbs:
+                BossAnimator.Play("BossFireProjectile");
+                break;
+            case boss_state.MoveToDifferentSideOfScreen:
+                nextPositionString = (nextPositionString == "Left") ? "Right" : "Left";
+                PrepareMove();
+                break;
         }
     }
 
@@ -62,7 +70,6 @@ public class Boss_State_Machine : MonoBehaviour
     }
 
     private boss_state PreviousState;
-
     #region Components
     private SpriteRenderer BossSpriteRenderer;
     private Animator BossAnimator;
@@ -75,15 +82,25 @@ public class Boss_State_Machine : MonoBehaviour
 
     int statesRepeated;
     // Start is called before the first frame update
+    [Header("Shooting Projectile")]
     public GameObject projectile;
     private Transform playerTransform;
+    public ParticleSystem ProjectileParticle;
+    public float TimeToShoot = 2;
+    [Header("Boss Movement")]
     public List<BossPositions> bossPositions = new List<BossPositions>();
-    private Dictionary<String, Transform> bossPositionDictionary = new Dictionary<string, Transform>();
-    private Transform nextBossPosition;
-    private String nextPositionString;
+    private Dictionary<string, Transform> bossPositionDictionary = new Dictionary<string, Transform>();
+    public Transform Parent;
+    private Vector2 initialBossPosition;
+    private Vector2 nextBossPosition;
+    private float timeElapsed;
+    public float TimeToMoveSides = 1f;
 
+    private string nextPositionString;
+    private string nextAnimationToPlay;
+    public BoxCollider2D TileRemoverCollider;
     private bool StateComplete;
-
+    
     void Awake()
     {
         playerTransform = FindObjectOfType<CharacterMovement>().transform;
@@ -92,13 +109,13 @@ public class Boss_State_Machine : MonoBehaviour
         BossAnimator = GetComponent<Animator>();
         foreach(BossPositions pos in bossPositions)
         {
-            
+            bossPositionDictionary.Add(pos.BossPositionName, pos.BossPosition);
         }
     }
 
     private void Update()
     {
-        if(playerTransform.position.x > transform.position.x)
+        if(playerTransform.position.x > Parent.position.x)
         {
             BossSpriteRenderer.flipX = true;
         }
@@ -120,10 +137,12 @@ public class Boss_State_Machine : MonoBehaviour
                 Idle();
                 break;
             case boss_state.ShootOrbs:
+                timeElapsed += Time.deltaTime;  
                 ShootProjectile();
                 break;
             case boss_state.MoveToDifferentSideOfScreen:
-
+                timeElapsed += Time.deltaTime;
+                MoveToOppositeSide();
                 break;
             case boss_state.RemoveTerrain:
                 break;
@@ -162,18 +181,49 @@ public class Boss_State_Machine : MonoBehaviour
         StateComplete = true;
     }
 
+    public void PrepareToShootProjectile()
+    {
+        ProjectileParticle.Play();
+    }
+
     private void ShootProjectile()
     {
+        if(timeElapsed > TimeToShoot)
+        {
+            StateComplete = true;
+            Projectile projPrefab = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Projectile>();
+            projPrefab.MoveProjectile(playerTransform.position);
+            nextAnimationToPlay = "FireBall";
+            Invoke("StopProjectileEffect", 0.2f);
+            Invoke("MoveToIdle", 1f);
+        }
+    }
 
-        Projectile projPrefab = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Projectile>();
-        projPrefab.MoveProjectile(playerTransform.position);
-        StateComplete = true;
+    private void StopProjectileEffect()
+    {
+        ProjectileParticle.Stop();
+    }
+
+    private void PrepareMove()
+    {
+        BossAnimator.SetTrigger("InIdleState");
+        timeElapsed = 0;
+        initialBossPosition = Parent.position;
+        nextBossPosition = bossPositionDictionary[nextPositionString].position;
     }
 
     private void MoveToOppositeSide()
     {
-
+        var currentRatio = timeElapsed / TimeToMoveSides;
+        Parent.position = Vector2.Lerp(initialBossPosition, nextBossPosition, currentRatio);
+        if(currentRatio >= 1)
+        {
+            Parent.position = nextBossPosition;
+            timeElapsed = 0;
+            BossState = boss_state.idle;
+        }
     }
+
     private void RemoveTerrain()
     {
 
@@ -187,6 +237,11 @@ public class Boss_State_Machine : MonoBehaviour
     private void CaughtKitchi()
     {
 
+    }
+
+    private void MoveToIdle()
+    {
+        BossState = boss_state.idle;
     }
 }
 

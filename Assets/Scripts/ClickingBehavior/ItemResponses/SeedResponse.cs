@@ -21,7 +21,7 @@ public class SeedResponse : GenericEvent
         {
             return true; // failed to get the item
         }
-
+        print("Interaction Failed");
         // failed to get the item   
         return false;
     }

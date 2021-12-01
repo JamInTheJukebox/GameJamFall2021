@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TNT
   - SunStoneCollider
+  - TileRemover
   layers:
   - Default
   - TransparentFX
