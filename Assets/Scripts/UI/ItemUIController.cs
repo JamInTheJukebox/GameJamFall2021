@@ -205,6 +205,14 @@ public class ItemUIController : MonoBehaviour
     private void UpdateItemSprite()
     {
         ItemPNG.sprite = equippedItem.itemSprite;
+        if (equippedItem)
+        {
+            ItemPNG.color = new Color(1, 1, 1, 1);
+        }
+        else
+        {
+            ItemPNG.color = new Color(1, 1, 1, 0);
+        }
     }
 
     private void UpdateCounter()
