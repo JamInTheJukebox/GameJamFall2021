@@ -1317,7 +1317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646032580569499651, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646032581042403534, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
       propertyPath: m_SortingOrder
@@ -3872,6 +3872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanTransitionLevel: 0
   TouchToChangeLevel: 1
+  Song: {fileID: 8300000, guid: cef43d145eedbbe48bd13cb3f088e624, type: 3}
 --- !u!1 &1585386939
 GameObject:
   m_ObjectHideFlags: 0

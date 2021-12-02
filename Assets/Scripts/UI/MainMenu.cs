@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     private void Awake()
     {
         if(AudioManager.Instance != null)
-            AudioManager.Instance.PlayMusic(Song);
+            AudioManager.Instance.PlayMusicwithCrossFade(Song);
     }
     public void PlayButtonSFX()
     {

@@ -2290,6 +2290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanTransitionLevel: 1
   TouchToChangeLevel: 0
+  Song: {fileID: 0}
 --- !u!1001 &484549704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8690,6 +8691,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5232134051244657244, guid: e6c6fca1ff2315743a76d8233d66dfb9, type: 3}
+      propertyPath: Song
+      value: 
+      objectReference: {fileID: 8300000, guid: cef43d145eedbbe48bd13cb3f088e624, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6c6fca1ff2315743a76d8233d66dfb9, type: 3}
 --- !u!1001 &5300222547917687908

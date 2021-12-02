@@ -87,6 +87,8 @@ public class AudioManager : MonoBehaviour
     {
         //Figures out which clip is playing
         AudioSource activeSource = (firstMusicSourceIsPlaying) ? musicsource : musicsource2;
+        if (newClip == activeSource.clip)
+            return;
         AudioSource newSource = (firstMusicSourceIsPlaying) ? musicsource2 : musicsource;
 
         //Swap the music playing

@@ -22536,6 +22536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanTransitionLevel: 1
   TouchToChangeLevel: 0
+  Song: {fileID: 8300000, guid: bfd1cdfead3be6d4aadf8fb0b156e8ba, type: 3}
 --- !u!4 &2061939152
 Transform:
   m_ObjectHideFlags: 0
