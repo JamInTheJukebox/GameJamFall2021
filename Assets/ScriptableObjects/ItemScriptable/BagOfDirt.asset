@@ -16,6 +16,6 @@ MonoBehaviour:
   itemAvailable: 1
   requiresInteractable: 1
   itemSprite: {fileID: -5024177000993851153, guid: 0c1e86d857b08124795b0a8ef2d692ea, type: 3}
-  cursorImage: {fileID: 2800000, guid: de1bde761f4f5fb429ba0da59ffb3849, type: 3}
+  cursorImage: {fileID: 2800000, guid: cc90e1aca85ac09478ca242599114adf, type: 3}
   itemUses: 1
   useCounter: 1

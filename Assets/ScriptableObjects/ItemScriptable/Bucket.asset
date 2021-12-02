@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Bucket
   m_EditorClassIdentifier: 
   itemType: 2
-  itemAvalible: 1
-  itemSprite: {fileID: 21300000, guid: 669e0fa42322eda44aee47260cc95eba, type: 3}
-  cursorImage: {fileID: 2800000, guid: 669e0fa42322eda44aee47260cc95eba, type: 3}
+  itemAvailable: 1
+  requiresInteractable: 1
+  itemSprite: {fileID: 1039971290561133328, guid: 0c1e86d857b08124795b0a8ef2d692ea, type: 3}
+  cursorImage: {fileID: 2800000, guid: 3a6c1e49e3fc0e448a1e34ead1078762, type: 3}
   itemUses: 0
+  useCounter: 0

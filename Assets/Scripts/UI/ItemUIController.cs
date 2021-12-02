@@ -42,6 +42,7 @@ public class ItemUIController : MonoBehaviour
                 if(inventoryItems.Count == 0)   // inventory is empty
                 {
                     ItemPNG.sprite = defaultItemPanelSprite;
+                    ItemPNG.color = new Color(1, 1, 1, 0);
                     TextDisplayParent.SetActive(false);
                     usingItem = false;
                     return;
@@ -207,7 +208,7 @@ public class ItemUIController : MonoBehaviour
     private void UpdateItemSprite()
     {
         ItemPNG.sprite = equippedItem.itemSprite;
-        if (equippedItem)
+        if (ItemPNG.sprite)
         {
             ItemPNG.color = new Color(1, 1, 1, 1);
         }
@@ -247,7 +248,7 @@ public class ItemUIController : MonoBehaviour
         }
     }
 
-    private Vector2 GetNewHotspot(Texture hotspot)
+    private Vector2 GetNewHotspot(Texture2D hotspot)
     {
         return new Vector2(hotspot.width / 2, hotspot.height / 2);
     }
