@@ -12,9 +12,12 @@ public class EnvironmentController : MonoBehaviour
     [Header("Environment Overlay")]
     [SerializeField] float overlayFadeDuration;
     public Color overlayColor;
+    public AudioClip LevelSong;
 
     private void Awake()
     {
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayMusicwithCrossFade(LevelSong);
         timelineController = FindObjectOfType<TimelineController>();
         timelineDictionary.Add(Timeline.Past, timelineEnvironments[0]);
         timelineDictionary.Add(Timeline.Present, timelineEnvironments[1]);

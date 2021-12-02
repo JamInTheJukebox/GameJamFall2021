@@ -7,12 +7,9 @@ public class Level_Transition : MonoBehaviour
 {
     public bool CanTransitionLevel = true;          // require level transitions.
     public bool TouchToChangeLevel;
-    public AudioClip Song;
 
     private void Awake()
     {
-        if (AudioManager.Instance != null)
-            AudioManager.Instance.PlayMusic(Song);
         if (GameManager.instance == null)
         {
             //GameManager.StartInMainMenu = false;

@@ -4466,6 +4466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryItems: []
   ItemPNG: {fileID: 3344499881387227208}
+  DefaultCursor: {fileID: 2800000, guid: 0225f2248b4a9204396d93a83b3c10c3, type: 3}
   defaultItemPanelSprite: {fileID: 0}
   EnableItemButton: {fileID: 3344499881253878175}
   TextDisplay: {fileID: 3344499881349265748}

@@ -70,6 +70,7 @@ public class ItemUIController : MonoBehaviour
 
     [Header("Panels")]
     [SerializeField] Image ItemPNG;
+    [SerializeField] Texture2D DefaultCursor;
     [SerializeField] Sprite defaultItemPanelSprite;
     [SerializeField] Button EnableItemButton;
     [SerializeField] TextMeshProUGUI TextDisplay;
@@ -80,6 +81,7 @@ public class ItemUIController : MonoBehaviour
 
     private void Awake()
     {
+        UpdateCursor();
         if (inventoryItems.Count != 0)
             equippedItem = inventoryItems[0];
     }
@@ -224,11 +226,14 @@ public class ItemUIController : MonoBehaviour
 
     private void UpdateCursor()
     {
+        var cursorHotspot = GetNewHotspot((equippedItem == null ? DefaultCursor : equippedItem.cursorImage));
+        print(cursorHotspot);
         if (usingItem)
         {
             if (equippedItem.cursorImage != null)
             {
-                Cursor.SetCursor(equippedItem.cursorImage, Vector2.zero, CursorMode.Auto);
+                Cursor.SetCursor(equippedItem.cursorImage, cursorHotspot, CursorMode.Auto);
+
             }
             else
             {
@@ -238,10 +243,14 @@ public class ItemUIController : MonoBehaviour
         else
         {
             // reset to default cursor;
-            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(null, cursorHotspot, CursorMode.Auto);
         }
     }
 
+    private Vector2 GetNewHotspot(Texture hotspot)
+    {
+        return new Vector2(hotspot.width / 2, hotspot.height / 2);
+    }
     private void UpdateItemColors()         // makes the circle around the item either yellow(Indicates item is in use) or white(Item not it use)
     {
         var colors = EnableItemButton.colors;

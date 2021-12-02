@@ -5418,6 +5418,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8646032581135907437, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
+      propertyPath: LevelSong
+      value: 
+      objectReference: {fileID: 8300000, guid: 5dc5713f73ec8374d90c1223c255233d, type: 3}
     - target: {fileID: 8646032581135907438, guid: 332ae8c0fe35a5a4888e55bc718d2be0, type: 3}
       propertyPath: m_RootOrder
       value: 0
