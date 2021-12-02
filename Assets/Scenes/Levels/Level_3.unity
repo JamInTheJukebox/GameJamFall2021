@@ -6922,9 +6922,14 @@ MonoBehaviour:
         m_CallState: 2
   dialogueTyper: {fileID: 0}
   conversation:
-  - profile: {fileID: 0}
+  - profile: {fileID: 11400000, guid: e2f4c01abcd05a84a96cc50acb18cac3, type: 2}
     pictureIndex: 0
-    line: Hey!! I said Watch!! Don't touch!
+    line: "I said, WATCH, NOT touch! Mind you, the moment those taffy seeds touch
+      soil and water, you\u2019ve got a problem on your hands. "
+  - profile: {fileID: 11400000, guid: e2f4c01abcd05a84a96cc50acb18cac3, type: 2}
+    pictureIndex: 0
+    line: "They grow as fast as lightning and are as sturdy as boulders. It\u2019s
+      devil\u2019s work to try an\u2019 remove a single one of \u2018em!"
 --- !u!1 &1728645237
 GameObject:
   m_ObjectHideFlags: 0
@@ -13440,9 +13445,11 @@ MonoBehaviour:
         m_CallState: 2
   dialogueTyper: {fileID: 0}
   conversation:
-  - profile: {fileID: 0}
+  - profile: {fileID: 11400000, guid: e2f4c01abcd05a84a96cc50acb18cac3, type: 2}
     pictureIndex: 0
-    line: Hey!! I said Watch!! Don't touch!
+    line: "Get yerself back \u2018ere before I send YOU on a special trip to fetch
+      water\u2026 with the river snappers. There is NOT going to be a spilled jug
+      on MY watch. "
 --- !u!4 &7091209949841657773
 Transform:
   m_ObjectHideFlags: 0
