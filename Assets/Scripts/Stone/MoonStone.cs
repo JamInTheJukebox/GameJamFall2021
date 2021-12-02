@@ -31,4 +31,9 @@ public class MoonStone : StoneBehavior
             MoonLight.intensity = NewIntensity;
         stateChanged = !stateChanged;
     }
+    public bool getStateChanged()
+    {
+        bool copy_stateChanged = stateChanged;
+        return copy_stateChanged;
+    }
 }

@@ -79,6 +79,7 @@ public class PauseMenu : MonoBehaviour
     public void QuitToMenu()
     {
         pauseState = 0;
+        Time.timeScale = 1;
         PauseMenuAnim.Play("PauseDefaultState");
         enablePausing(false);
         GameManager.instance.ChangeScene(SceneNames.MAIN_MENU);         // change to level select in the future.
