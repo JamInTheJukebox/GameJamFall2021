@@ -6,12 +6,12 @@ using UnityEngine;
 public class DialogueProfile_SO : ScriptableObject
 {
     // Start is called before the first frame update
-    [SerializeField] Sprite CharacterSprite;
+    [SerializeField] List<Sprite> CharacterSprites = new List<Sprite>();
     [SerializeField] string CharacterName;
 
-    public Sprite GetCharacterSprite()
+    public Sprite GetCharacterSprite(int SpriteIndex = 0)
     {
-        return CharacterSprite;
+        return CharacterSprites[SpriteIndex];
     }
     public string GetCharacterName()
     {

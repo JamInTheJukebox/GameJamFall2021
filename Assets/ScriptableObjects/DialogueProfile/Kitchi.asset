@@ -10,11 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7dd62d7e22667c44b05ac4fcf296339, type: 3}
-  m_Name: Prince
+  m_Name: Kitchi
   m_EditorClassIdentifier: 
   CharacterSprites:
-  - {fileID: 2974861737516703134, guid: f832984a3b417d64eb8734d1ae5c246d, type: 3}
-  - {fileID: -6737877178031263430, guid: f832984a3b417d64eb8734d1ae5c246d, type: 3}
-  - {fileID: 3917812897948935793, guid: f832984a3b417d64eb8734d1ae5c246d, type: 3}
-  - {fileID: -1931349448185449871, guid: f832984a3b417d64eb8734d1ae5c246d, type: 3}
-  CharacterName: Prince
+  - {fileID: -6340035200020778178, guid: f832984a3b417d64eb8734d1ae5c246d, type: 3}
+  CharacterName: Kitchi
