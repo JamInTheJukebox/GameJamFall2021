@@ -7,7 +7,13 @@ public class MainMenu : MonoBehaviour
 {
     public AudioClip ButtonClickSFX;
     public AudioClip QuitButtonSFX;
+    public AudioClip Song;
 
+    private void Awake()
+    {
+        if(AudioManager.Instance != null)
+            AudioManager.Instance.PlayMusic(Song);
+    }
     public void PlayButtonSFX()
     {
         AudioManager.Instance.PlaySFX(ButtonClickSFX);
