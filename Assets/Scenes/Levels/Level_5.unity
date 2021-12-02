@@ -15762,7 +15762,8 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: a338f190dd0dd3f42bb34749b3f85043, type: 2}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: a338f190dd0dd3f42bb34749b3f85043, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -17419,19 +17420,7 @@ MonoBehaviour:
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   RequiredItemToInteract: 2
   Water: {fileID: 2076200536}
   InfiniteWaterSource: 0
@@ -26733,21 +26722,9 @@ MonoBehaviour:
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   RequiredItemToInteract: 2
-  Water: {fileID: 0}
+  Water: {fileID: 1759147210}
   InfiniteWaterSource: 0
 --- !u!61 &1945882051
 BoxCollider2D:
@@ -34037,21 +34014,9 @@ MonoBehaviour:
   TouchToInteract: 0
   onInteract:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   RequiredItemToInteract: 2
-  Water: {fileID: 0}
+  Water: {fileID: 903416944}
   InfiniteWaterSource: 0
 --- !u!61 &8514337611342526883
 BoxCollider2D:
