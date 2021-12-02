@@ -149,8 +149,12 @@ public class StoneController : MonoBehaviour
 
     private void ActivateInvalidUse()
     {
+        if(InvalidActivationAction == null) { return; }
         InvalidActivationAction?.Invoke();
-        ScreenShakeController.instance.ShakeScreen(0.35f, 0.17f);
+        if(ScreenShakeController.instance != null)
+        {
+            ScreenShakeController.instance.ShakeScreen(0.35f, 0.17f);
+        }
         Invoke("ShowWarning", 0.2f);
         Invoke("EnableStoneActivation", 0.2f);
         AudioManager.Instance.PlaySFX(TimeDistortionSFX, 0.9f);

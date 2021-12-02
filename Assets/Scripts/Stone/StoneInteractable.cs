@@ -12,7 +12,9 @@ public class StoneInteractable : MonoBehaviour
     {
         SecondsToInteract -= Time.deltaTime;
         if (SecondsToInteract < 0)
+        {
             StoneEvent?.Invoke();
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -21,5 +23,9 @@ public class StoneInteractable : MonoBehaviour
         {
             InteractWithStone();
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
     }
 }

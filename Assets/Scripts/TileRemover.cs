@@ -9,11 +9,7 @@ public class TileRemover : MonoBehaviour
     public float TimeForPlatformsToReturn = 3;
     Coroutine currentCoroutine;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A)) { TestTileRemover(); }
-    }
-    public void TestTileRemover()
+    public void RemoveTiles()
     {
         if(currentCoroutine != null) { return; }
         var m_HitDetect = Physics2D.BoxCastAll(transform.position, new Vector2(8, 100), 0,Vector2.down);

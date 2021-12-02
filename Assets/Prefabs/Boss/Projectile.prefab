@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1376637966166472405}
   - component: {fileID: 1649714441436003434}
   - component: {fileID: 664496417865844995}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1376637966166472407}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.9
+  m_Radius: 1.2
 --- !u!114 &664496417865844995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,4 +134,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9f742704b8ee34887cbce09b088a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SecondsToInteract: 0.3
+  StoneEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 664496417865844995}
+        m_TargetAssemblyTypeName: Projectile, Assembly-CSharp
+        m_MethodName: DestroyParticle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   vel: 25
+  Orb_Gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.7018868, b: 0.7018868, a: 1}
+    key1: {r: 0.72156864, g: 0.16470589, b: 0.9529412, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  OrbSpriteRenderer: {fileID: 1376637966166472404}
+  MaxTime: 0
+  ProjectileDestructionEffect: {fileID: 5573092860600139149, guid: eaebadf26b1818f4886dc3bdacb3ef09, type: 3}

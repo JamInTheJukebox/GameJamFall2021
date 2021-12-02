@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Experimental.Rendering.Universal; //2019 VERSIONS
 
 public class MoonStone : StoneBehavior
@@ -11,13 +12,15 @@ public class MoonStone : StoneBehavior
     private float OldIntensity;
     private bool stateChanged;
 
+    public UnityEvent moonStoneCallback;
+
     public override void StoneInit()        // awake function
     {
         base.StoneInit();
         if (MoonLight != null)
             OldIntensity = MoonLight.intensity;
         else
-            Debug.LogWarning("MoonStone.cs: MOonlight entity Missing.");
+            Debug.LogWarning("MoonStone.cs: Moonlight entity Missing.");
     }
 
     public override void UseStone()
@@ -30,6 +33,7 @@ public class MoonStone : StoneBehavior
         else
             MoonLight.intensity = NewIntensity;
         stateChanged = !stateChanged;
+        moonStoneCallback?.Invoke();
     }
     public bool getStateChanged()
     {
