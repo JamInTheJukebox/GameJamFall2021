@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterSprites:
   - {fileID: -6728324318481286711, guid: e334242c8d6530c479dae8403a743236, type: 3}
+  - {fileID: 4461416002078758064, guid: ee70247e33ba4c6429bad94a4e9478c6, type: 3}
+  - {fileID: -2382713353248153079, guid: 56d7e890be153574f9db8398d2e8ecaf, type: 3}
   CharacterName: Villager
