@@ -53,6 +53,7 @@ public class DialoguePrompt : Interactable
 public struct Conversation
 {
     public DialogueProfile_SO profile;
+    public int pictureIndex;
     public string line;
     // text animation?
 }

@@ -72,7 +72,7 @@ public class DialogueTyper : MonoBehaviour
             else
             {
                 CharacterPortrait.gameObject.SetActive(true);
-                CharacterPortrait.sprite = type.profile.GetCharacterSprite();
+                CharacterPortrait.sprite = type.profile.GetCharacterSprite(type.pictureIndex);
             }
             NextDialogueIndicator.SetActive(false);
             dialogueTextContainer.text = "";
