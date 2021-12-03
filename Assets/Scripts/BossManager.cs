@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BossManager : MonoBehaviour
 {
+    public List<GameObject> LevelCracks = new List<GameObject>();
+
     private int m_Health = 4;
     public int Health
     {
@@ -16,7 +18,8 @@ public class BossManager : MonoBehaviour
                 m_Health = value;
                 if(m_Health <= 0)
                 {
-                    print("GAME WIN!!");
+                    FindObjectOfType<ScreenShakeController>().ShakeScreen(10, 0.2f);
+                    Invoke("ChangeLevel",4f);
                 }
             }
         }
@@ -48,6 +51,27 @@ public class BossManager : MonoBehaviour
     public void DecrementHealth()
     {
         Health--;
+    }
+
+    public void TurnOnCracks()
+    {
+        if(LevelCracks.Count > 0)
+        {
+            int index = Random.Range(0, LevelCracks.Count);
+            LevelCracks[index].SetActive(true);
+            LevelCracks.Remove(LevelCracks[index]);
+            if (LevelCracks.Count > 0)
+            {
+                index = Random.Range(0, LevelCracks.Count);
+                LevelCracks[index].SetActive(true);
+                LevelCracks.Remove(LevelCracks[index]);
+            }
+        }
+    }
+
+    private void ChangeLevel()
+    {
+        GameManager.instance.ChangeScene(SceneNames.MAIN_MENU);
     }
 
 }

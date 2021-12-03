@@ -7,7 +7,7 @@ public class ClickController : MonoBehaviour
 {
     // Update is called once per frame
     public LayerMask InteractableLayer;
-
+    public bool DisableClickingOnTyper = true;
     void Update() {
 
         if (PreventClicking()) { return; }
@@ -26,7 +26,7 @@ public class ClickController : MonoBehaviour
         // do not do anything with interactables if you are over UI.
         try
         {
-            return EventSystem.current.IsPointerOverGameObject() || MasterUserInterface.instance.PauseMenu.isPaused() || MasterUserInterface.instance.DialogueTyper.isTyping();
+            return EventSystem.current.IsPointerOverGameObject() || MasterUserInterface.instance.PauseMenu.isPaused() || (MasterUserInterface.instance.DialogueTyper.isTyping() && DisableClickingOnTyper);
         }
         catch
         {

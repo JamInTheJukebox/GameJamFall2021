@@ -10,6 +10,10 @@ public class StoneCollection : MonoBehaviour
     {
         foreach(Transform stone in transform)
         {
+            if (!stone.gameObject.activeInHierarchy)
+            {
+                continue;
+            }
             if(stone.GetComponent<StoneBehavior>() != null)
             {
                 var stoneBehavior = stone.GetComponent<StoneBehavior>();

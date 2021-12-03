@@ -18,6 +18,7 @@ public class TNTSunStoneEvent : StoneInteractable
             InteractWithStone();
             if(MaxTime != 0)
             {
+                if(TNT_SpriteRenderer == null) { return; }
                 TNT_SpriteRenderer.color = TNT_Gradient.Evaluate(SecondsToInteract / MaxTime);
             }
         }

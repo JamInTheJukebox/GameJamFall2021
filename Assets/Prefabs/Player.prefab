@@ -384,6 +384,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1789472270374849524}
     m_Modifications:
+    - target: {fileID: 1821237569406826352, guid: aac22870d5612f7488880dbf211fd3b7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5938502077747444336, guid: 090c55b536995e641933c7b1f034ea29, type: 3}
     - target: {fileID: 1821237569657472098, guid: aac22870d5612f7488880dbf211fd3b7, type: 3}
       propertyPath: m_Name
       value: Stones
@@ -432,6 +436,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1821237570072571706, guid: aac22870d5612f7488880dbf211fd3b7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7575990655249685806, guid: 090c55b536995e641933c7b1f034ea29, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac22870d5612f7488880dbf211fd3b7, type: 3}
 --- !u!4 &935854077 stripped

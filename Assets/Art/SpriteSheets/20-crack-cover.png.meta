@@ -1,0 +1,540 @@
+fileFormatVersion: 2
+guid: 27c97098cbe5ce64aa52c2b013929f01
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8558312847071853012
+    second: 20-crack-cover_0
+  - first:
+      213: -9057639509260630713
+    second: 20-crack-cover_1
+  - first:
+      213: 5407130062487421441
+    second: 20-crack-cover_2
+  - first:
+      213: 8500636472926581355
+    second: 20-crack-cover_5
+  - first:
+      213: 5913104283827163943
+    second: 20-crack-cover_7
+  - first:
+      213: 1493439912005518423
+    second: 20-crack-cover_8
+  - first:
+      213: 8476441750394442183
+    second: 20-crack-cover_11
+  - first:
+      213: -4657369955955549673
+    second: 20-crack-cover_16
+  - first:
+      213: -767189549238360555
+    second: 20-crack-cover_17
+  - first:
+      213: -6524770197379563325
+    second: 20-crack-cover_19
+  - first:
+      213: 7112751025647559940
+    second: 20-crack-cover_20
+  - first:
+      213: -2313499836563194831
+    second: 20-crack-cover_21
+  - first:
+      213: 1881233013458021338
+    second: 20-crack-cover_22
+  - first:
+      213: 7808418885382069062
+    second: 20-crack-cover_23
+  - first:
+      213: -1998592632271992152
+    second: 20-crack-cover_27
+  - first:
+      213: -8353517619260587188
+    second: 20-crack-cover_31
+  - first:
+      213: -3783028368975774949
+    second: 20-crack-cover_32
+  - first:
+      213: 8050105087621103040
+    second: 20-crack-cover_33
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 20-crack-cover_0
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 638
+        width: 280
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d93166c03c35c670800000000000000
+      internalID: 8558312847071853012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_1
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 632
+        width: 165
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7450af21bdccc4280800000000000000
+      internalID: -9057639509260630713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_2
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 631
+        width: 165
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10206e4c42cf90b40800000000000000
+      internalID: 5407130062487421441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_5
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 649
+        width: 191
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62b48575d358f570800000000000000
+      internalID: 8500636472926581355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_7
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 481
+        width: 170
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723db5564019f0250800000000000000
+      internalID: 5913104283827163943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_8
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 454
+        width: 265
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754ca78ffa3c9b410800000000000000
+      internalID: 1493439912005518423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_11
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 525
+        width: 305
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c11d83acde52a570800000000000000
+      internalID: 8476441750394442183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_16
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 302
+        width: 164
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a51bb63b2bd5fb0800000000000000
+      internalID: -4657369955955549673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_17
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 425
+        width: 165
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51661427b256a55f0800000000000000
+      internalID: -767189549238360555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_19
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 268
+        width: 171
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0c220431c5375a0800000000000000
+      internalID: -6524770197379563325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_20
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 248
+        width: 165
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405a4837f5195b260800000000000000
+      internalID: 7112751025647559940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_21
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 288
+        width: 164
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13cf9b5f72cc4efd0800000000000000
+      internalID: -2313499836563194831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_22
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 274
+        width: 172
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb27e2657b7b1a10800000000000000
+      internalID: 1881233013458021338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_23
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 117
+        width: 158
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b56a00b931d5c60800000000000000
+      internalID: 7808418885382069062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_27
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 102
+        width: 166
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa07b607929344e0800000000000000
+      internalID: -1998592632271992152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_31
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 119
+        width: 164
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43810febf7521c80800000000000000
+      internalID: -8353517619260587188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_32
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 112
+        width: 167
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b39f3edbbff7bc0800000000000000
+      internalID: -3783028368975774949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20-crack-cover_33
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 111
+        width: 175
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd78380de7b7bf60800000000000000
+      internalID: 8050105087621103040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

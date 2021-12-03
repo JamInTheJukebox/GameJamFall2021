@@ -87,12 +87,14 @@ public class StoneController : MonoBehaviour
     [SerializeField] Color StoneInUseButtonColor;
 
     [Header("Fail State")]
+    public bool EnableUseBetweenTimelines;
     public UnityEvent InvalidActivationAction;      // used in past/future;
     public float ScreenShakeDuration = 0.35f;
     public float ScreenShakePower = 0.17f;
     [SerializeField] Conversation FailConversation;
     public AudioClip TimeDistortionSFX;
     bool DisableStoneActivation;
+
 #endregion
     private void Start()
     {
@@ -124,7 +126,7 @@ public class StoneController : MonoBehaviour
     public void enableStone()
     {
         if (CannotUseStone()) { return; }
-        if(MasterUserInterface.instance.TimelineController.currentTime != Timeline.Present)
+        if(MasterUserInterface.instance.TimelineController.currentTime != Timeline.Present && !EnableUseBetweenTimelines)
         {
             ActivateInvalidUse();
             return;

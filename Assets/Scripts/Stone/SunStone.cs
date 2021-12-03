@@ -40,7 +40,7 @@ public class SunStone : StoneBehavior
 
     public override void ClickingBehavior()
     {
-        print("BURNING!!");
+        //print("BURNING!!");
         // accept a collision
         // run a function in the collion(UNtil its event is complete);
         // if you collide with something, play this sound.

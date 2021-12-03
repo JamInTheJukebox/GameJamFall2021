@@ -431,6 +431,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -652,6 +653,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -1933,6 +1935,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -2282,6 +2285,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -5862,6 +5866,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -8277,6 +8282,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -9379,6 +9385,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 251991199, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 251991202, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
       propertyPath: MoonLight
       value: 
@@ -9938,6 +9948,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -11232,6 +11243,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -15484,6 +15496,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -17567,6 +17580,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -17820,6 +17834,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -18690,6 +18705,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -19144,6 +19160,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
@@ -20406,6 +20423,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -21238,6 +21256,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -21645,6 +21664,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -23392,6 +23412,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -23703,6 +23724,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -24006,6 +24028,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -27349,6 +27372,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -28260,6 +28284,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -29254,6 +29279,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.6745098, b: 0.6745098, a: 1}
@@ -29821,6 +29847,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.48490566, b: 0.48490566, a: 1}
@@ -30222,6 +30249,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  ResetToOriginal: 0
   TNT_Gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.48490566, b: 0.48490566, a: 1}

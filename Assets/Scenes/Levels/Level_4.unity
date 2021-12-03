@@ -7515,6 +7515,10 @@ PrefabInstance:
       propertyPath: MoonLight
       value: 
       objectReference: {fileID: 279772838}
+    - target: {fileID: 935854076, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1789472270374849521, guid: e86e7f7879788554cad5e9ceda9fb27e, type: 3}
       propertyPath: m_Name
       value: Player

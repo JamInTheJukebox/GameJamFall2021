@@ -36,6 +36,7 @@ public class Projectile : StoneInteractable
         // spawn particle effect
         if (col.CompareTag(Tags.PLAYER))
         {
+            FindObjectOfType<Boss_State_Machine>().CatchKitchi();
             //do something here
             DestroyParticle();
         }

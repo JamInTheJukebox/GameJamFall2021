@@ -50,6 +50,7 @@ public class Boss_State_Machine : MonoBehaviour
         switch (m_BossState)
         {
             case boss_state.idle:
+                bossManager.ChangeKitchiState(false);
                 break;
             case boss_state.ShootOrbs:
                 currentParticleEffect = ProjectileParticle;
@@ -60,7 +61,7 @@ public class Boss_State_Machine : MonoBehaviour
                 }
                 else
                 {
-                    currentOrbsToShoot = UnityEngine.Random.Range(2, 4);
+                    currentOrbsToShoot = UnityEngine.Random.Range(2, 5);
                 }
                 break;
             case boss_state.MoveToDifferentSideOfScreen:
@@ -128,9 +129,14 @@ public class Boss_State_Machine : MonoBehaviour
     private string nextAnimationToPlay;
     private bool StateComplete;
     ParticleSystem currentParticleEffect;
-
+    StoneInteractable BossHurtbox;
     // CaughtKitchi
     BossManager bossManager;
+
+    Coroutine ReleaseKitchiCoroutine;
+
+    public List<Conversation> caughtKitchiConversation = new List<Conversation>();
+    public List<Conversation> releaseKitchiConversation = new List<Conversation>();
 
     void Awake()
     {
@@ -139,6 +145,8 @@ public class Boss_State_Machine : MonoBehaviour
         BossSpriteRenderer = GetComponent<SpriteRenderer>();
         BossAnimator = GetComponent<Animator>();
         bossManager = FindObjectOfType<BossManager>();
+        BossHurtbox = GetComponent<StoneInteractable>();
+        BossHurtbox.enabled = false;
         foreach (BossPositions pos in bossPositions)
         {
             bossPositionDictionary.Add(pos.BossPositionName, pos.BossPosition);
@@ -195,7 +203,7 @@ public class Boss_State_Machine : MonoBehaviour
 
     private boss_state ChooseNextState()
     {
-        int MaxState = (BossPhase == 1) ? 3 : 6;
+        int MaxState = (BossPhase == 1) ? 3 : 5;
         boss_state newBossState = (boss_state)UnityEngine.Random.Range(0, MaxState);
 
         if (newBossState == boss_state.idle || newBossState == boss_state.MoveToDifferentSideOfScreen)
@@ -334,7 +342,7 @@ public class Boss_State_Machine : MonoBehaviour
         Vector3 current = Parent.position;
 
         float elapsedTime = 0;
-        float waitTime =  1f;
+        float waitTime =  1.6f;
 
         while (elapsedTime < waitTime)
         {
@@ -350,10 +358,6 @@ public class Boss_State_Machine : MonoBehaviour
     }
 
     #endregion
-    private void CaughtKitchi()
-    {
-
-    }
 
     private void MoveToIdle()
     {
@@ -362,21 +366,58 @@ public class Boss_State_Machine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == Tags.PLAYER && !BossState.Equals(boss_state.CaughtKitchi))
+        bool changingTimelines = FindObjectOfType<TimelineController>().isChangingTime;
+        if (collision.gameObject.tag == Tags.PLAYER && !BossState.Equals(boss_state.CaughtKitchi) && !changingTimelines)
         {
-            // instantly transition to Boss State
-            BossState = boss_state.CaughtKitchi;
-
+            CatchKitchi();
         }
+    }
+    public void CatchKitchi()
+    {
+        if (BossState.Equals(boss_state.CaughtKitchi)) { return; }
+        BossState = boss_state.CaughtKitchi;
+        CancelInvoke();
+        StopAllCoroutines();
+        BossHurtbox.enabled = true;
+        ReleaseKitchiCoroutine = StartCoroutine(caughtKitchi());
     }
     private IEnumerator caughtKitchi()
     {
-        yield return null;
+        int TimesBeforeILose = 7;
+        Vector2 L = bossPositionDictionary["Left"].position;
+        Vector2 R = bossPositionDictionary["Right"].position;
+        MasterUserInterface.instance.DialogueTyper.TypeText(caughtKitchiConversation);
+        while (true)
+        {
+            TimesBeforeILose--;
+            nextBossPosition = new Vector2(UnityEngine.Random.Range(L.x, R.x), L.y);
+            StartTeleportAnimation();
+            yield return new WaitForSeconds(0.6f);
+            BossAnimator.Play("BossHover", -1, 0f);
+            yield return new WaitForSeconds(2.5f);
+            if(TimesBeforeILose < 0)
+            {
+                break;
+            }
+        }
+        BossHurtbox.enabled = false;
+        nextBossPosition = Vector2.up * 999;
+        StartTeleportAnimation();
+        Invoke("LoseGame", 1);
+        // play dialogue here
     }
 
     public void ReleaseKitchi()
     {
+        StopCoroutine(ReleaseKitchiCoroutine);
         print("Releasing Kitchi");
+        MoveToIdle();
+        MasterUserInterface.instance.DialogueTyper.TypeText(releaseKitchiConversation);
+    }
+
+    private void LoseGame()
+    {
+        FindObjectOfType<Level_Transition>().Die();
     }
 
 }
