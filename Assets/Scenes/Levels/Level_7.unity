@@ -22135,7 +22135,7 @@ MonoBehaviour:
     line: "I\u2019ve got you, thief! Now that you\u2019re in my dimensional-space
       bubble, you won\u2019t be able to escape!"
   - profile: {fileID: 11400000, guid: 40bdb064904e614448dd4c3d718af546, type: 2}
-    pictureIndex: 2
+    pictureIndex: 0
     line: "Now, I\u2019ll be able to finally take that duck off of your hands! "
 --- !u!1 &882262022
 GameObject:
@@ -38944,7 +38944,7 @@ MonoBehaviour:
     line: "I\u2019ve got you, thief! Now that you\u2019re in my dimensional-space
       bubble, you won\u2019t be able to escape!"
   - profile: {fileID: 11400000, guid: 40bdb064904e614448dd4c3d718af546, type: 2}
-    pictureIndex: 2
+    pictureIndex: 0
     line: "Now, I\u2019ll be able to finally take that duck off of your hands! "
 --- !u!61 &1579507366
 BoxCollider2D:
