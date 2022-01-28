@@ -125,6 +125,5 @@ public class DialogueTyper : MonoBehaviour
         if (skipDialogueTyping)
             proceedToNextDialogue = true;
         skipDialogueTyping = true;
-        
     }
 }
