@@ -6,6 +6,7 @@ namespace Project2021
     [InitializeOnLoad]
     public class HierarchyLabel : MonoBehaviour
     {
+        // Emphasize certain gameobjects
         static HierarchyLabel()
         {
             EditorApplication.hierarchyWindowItemOnGUI += HierarchyWindowItemOnGUI;
